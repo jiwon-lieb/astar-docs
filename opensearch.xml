@@ -4,8 +4,8 @@
   <ShortName>Astar Docs</ShortName>
   <Description>Search Astar Docs</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://docs.astar.network/img/fav.png</Image>
-  <Url type="text/html" method="get" template="https://docs.astar.network/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.astar.network/opensearch.xml" />
-  <moz:SearchForm>https://docs.astar.network/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://jiwon-lieb.github.io/img/fav.png</Image>
+  <Url type="text/html" method="get" template="https://jiwon-lieb.github.io/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://jiwon-lieb.github.io/opensearch.xml" />
+  <moz:SearchForm>https://jiwon-lieb.github.io/</moz:SearchForm>
 </OpenSearchDescription>
