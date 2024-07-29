@@ -1,17 +1,18 @@
 ---
 sidebar_position: 0
 title: OpenZeppelinウィザードを使用してスマートコントラクトを作成する
-sidebar_label: コントラクトの作成
+sidebar_label: Write A Contract
 ---
+
 import Figure from '/src/components/figure'
 
-このドキュメントでは、OpenZeppelinウィザードを使用してスマートコントラクトのコードを自動的に書く方法を説明します。 作成されたスマートコントラクトのコードは、**Open in Remix** ボタンをクリックしてRemix と統合したり、クリップボードにコピーして、使用したいIDE に貼り付けたりできます。
+This document explains how to automatically write any smart contract using the OpenZeppelin Wizard. The resulting smart contract code can either be integrated with Remix by Clicking the **Open in Remix** button, or copied to clipboard and pasted in the user's intended IDE.
 
 ## はじめに
 
-ブラウザで [OpenZeppelin Wizard](https://wizard.openzeppelin.com) に移動します。 最初に注意すべきことは、 **Solidity Wizard** と **Cairo Wizard** ボタンがあることです。
+ブラウザで [OpenZeppelin Wizard](https://wizard.openzeppelin.com) に移動します。 最初に注意すべきことは、 **Solidity Wizard** と **Cairo Wizard** ボタンがあることです。 First thing to notice is the **Solidity Wizard** and **Cairo Wizard** buttons.
 
-以下に挙げるいずれかのタブを選択し、Solidity (EVMチェーンの場合)またはCairolang(Starknetで使用可能)のすぐに使用可能なスマートコントラクトコードの作成を始めることができます。 These are:
+以下に挙げるいずれかのタブを選択し、Solidity (EVMチェーンの場合)またはCairolang(Starknetで使用可能)のすぐに使用可能なスマートコントラクトコードの作成を始めることができます。 These are: These are:
 
 - ERC20: ERC-20トークンのスマートコントラクト作成用
 - ERC721: NFT トークンのスマートコントラクト作成用
@@ -21,7 +22,7 @@ import Figure from '/src/components/figure'
 
 ## NFT コントラクトの作成
 
-視覚的にわかりやすいよう、NFT スマートコントラクトを作成します。 `Mintable` かつ `Burnable`な`ERC721`トークンを作成し、適切なライセンスを指定したいとします。
+For illustration purpose, we will be creating a NFT smart contract. Suppose you wanted to create a `Mintable`, `Burnable` `ERC721` token and specify an appropriate license for it.
 
 1. **ERC721** タブを選択します。
 
@@ -36,9 +37,9 @@ import Figure from '/src/components/figure'
 
 機能が選択されるたびに新しいコード行が自動的に書き込まれることに注目してください。
 
-## コントラクトが完成しました
+## Voila! Contract Ready
 
-結果として生成されるコード行で、Solidity で書かれたNFT トークンのコントラクトが完成しました。 上記のように、このソースコードをお好みのIDEに移植するか、Remixで直接開くことができます。
+With the resulting lines of code, you now have the NFT token contract written in Solidity. As mentioned above, this source code can now be ported to an IDE of your choice or opened directly in Remix.
 
 以下の図は、自動書き込みにより作成されたNFT スマートコントラクトのコードを示しています。
 
