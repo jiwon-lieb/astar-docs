@@ -3,18 +3,20 @@ sidebar_position: 0
 title: Hardhatを使用してスマートコントラクトをデプロイする
 sidebar_label: Hardhatを使用してデプロイする
 ---
+
 import Figure from '/src/components/figure'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Hardhatは、人気のあるスマートコントラクト開発フレームワークです。 このチュートリアルでは、Hardhatを使用して、Astar zkEVMテストネットにシンプルな、数を数えるスマートコントラクトをデプロイします。
-サンプルコントラクトとそれをデプロイするスクリプトを使用したHardhatプロジェクトの作成の基本について説明します。
+Hardhat is a popular smart contract development frameworks. In this tutorial, we will be using Hardhat to deploy a simple Counter smart contract to the Astar zkEVM Testnet.
+We will explore the basics of creating a Hardhat project with a sample contract and a script to deploy it.
 
 Hardhatの使い方については、[公式のHardhatドキュメント](https://hardhat.org/getting-started/)を参照してください。
 
 ## プロジェクトの新規作成
 
-空のフォルダに移動し、npm プロジェクトの作成を開始するには、`npm init` を実行し、表示される指示に従います。 yarnのようなnpm以外のパッケージマネージャーを使用することは可能ですが、Hardhatプラグインをシンプルにインストールするため、npm 7以降を使用することがHardhatにより推奨されています。
+空のフォルダに移動し、npm プロジェクトの作成を開始するには、`npm init` を実行し、表示される指示に従います。 yarnのようなnpm以外のパッケージマネージャーを使用することは可能ですが、Hardhatプラグインをシンプルにインストールするため、npm 7以降を使用することがHardhatにより推奨されています。 Hardhatは、人気のあるスマートコントラクト開発フレームワークです。 このチュートリアルでは、Hardhatを使用して、Astar zkEVMテストネットにシンプルな、数を数えるスマートコントラクトをデプロイします。
+サンプルコントラクトとそれをデプロイするスクリプトを使用したHardhatプロジェクトの作成の基本について説明します。
 
 ## Hardhat スマートコントラクト
 
@@ -25,7 +27,7 @@ Hardhatの使い方については、[公式のHardhatドキュメント](https:
 - **Press** `<ENTER>` javascript、typescript、または空のプロジェクトを選択します
 - **プレス** `<ENTER>` プロジェクトのルートを設定します
 - **プレス** `<ENTER>` `.gitignore`を追加します
-- **Press** `<ENTER>` hardhat @nomicfoundation/hard-toolbox\` をインストールします。
+- **Press** `<ENTER>` hardhat @nomicfoundation/hard-toolbox\\` をインストールします。
 
 ## デプロイ用のアカウントを作成
 
@@ -35,7 +37,7 @@ Hardhatの使い方については、[公式のHardhatドキュメント](https:
 ACCOUNT_PRIVATE_KEY='my private key'
 ```
 
-- `.env` ファイルに秘密鍵を書き入れてください。 MetaMask から秘密鍵を取得できます。 MetaMaskから秘密鍵を取得する方法については、以下のセクションを参照してください。
+- コントラクトのコンパイル スマートコントラクトの作成 `.env` ファイルに秘密鍵を書き入れてください。 MetaMask から秘密鍵を取得できます。 MetaMaskから秘密鍵を取得する方法については、以下のセクションを参照してください。
 
 <details>
 <summary>MetaMaskから秘密鍵を取得する方法</summary>
@@ -54,6 +56,7 @@ ACCOUNT_PRIVATE_KEY='my private key'
 **Do not commit your private key to a public repository!**
 
 .gitignoreファイルに`.env`が含まれていることを確認して、秘密鍵が公開されているリポジトリにコミットされないようにしてください。
+:::
 :::
 
 ## ハードハットの設定
@@ -84,6 +87,7 @@ ACCOUNT_PRIVATE_KEY='my private key'
         },
     };
 ```
+
 </TabItem>
 <TabItem value="typescript" label="Typescript" >
 
@@ -119,11 +123,19 @@ ACCOUNT_PRIVATE_KEY='my private key'
 </TabItem>
 </Tabs>
 
-## スマートコントラクトの作成
+## Write Smart Contract
+
 :::info
-**注意:** サンプルプロジェクトで用いる既存のスマートコントラクトコードは、`Lock.sol`コントラクトです。 削除しても、残しておいても全く問題ありません。
+**注意:** サンプルプロジェクトで用いる既存のスマートコントラクトコードは、`Lock.sol`コントラクトです。 削除しても、残しておいても全く問題ありません。 Feel free to delete it or leave it.
 :::
+
 - コントラクトフォルダに`Counter.sol`という名前の新しいファイルを作成します。
+
+```bash
+touch contracts/Counter.sol
+```
+
+- 以下のコードをコピーして `Counter.sol` コントラクトコードに貼り付けます:
 
 ```solidity
 //SPDX-License-Identifier: MIT
@@ -140,25 +152,6 @@ uint256 currentCount = 0;
         return currentCount;
     }
 }
-```
-
-- 以下のコードをコピーして `Counter.sol` コントラクトコードに貼り付けます:
-
-```js
-    const hre = require("hardhat");
-
-    async function main() {
-        const deployedContract = await hre.ethers.deployContract("Counter");
-        await deployedContract.waitForDeployment();
-        console.log(
-            `Counter contract deployed to https://zkatana.blockscout.com/address/${deployedContract.target}`
-        );
-    }
-
-    main().catch((error) => {
-        console.error(error);
-        process.exitCode = 1;
-    });
 ```
 
 ## デプロイするスクリプトを作成
@@ -182,22 +175,24 @@ uint256 currentCount = 0;
     });
 ```
 
-## コントラクトのコンパイル
+## Compile Contract
+
 - dotenv パッケージのインストール: `npm install dotenv`
 - コントラクトコードをコンパイルします。(CLIのプロジェクトルートに戻り、実行します。)
-    ```bash
-    npx hardhat compile
-    ```
+  ```bash
+  npx hardhat compile
+  ```
 
-## コントラクトのデプロイ
+## Deploy Contract
 
 - デプロイするスクリプトを実行:
-    ```bash
-    npx hardhat run scripts/deploy.js --network zKatana
-    ```
 
-    出力例:
+  ```bash
+  npx hardhat run scripts/deploy.js --network zKatana
+  ```
 
-    ```bash
-    Counter contract deployed to https://zkatana.blockscout.com/address/0x8731DC57f9C7e01f5Ba733E7a10692cA540862f8
-    ```
+  出力例:
+
+  ```bash
+  Counter contract deployed to https://zkatana.blockscout.com/address/0x8731DC57f9C7e01f5Ba733E7a10692cA540862f8
+  ```
