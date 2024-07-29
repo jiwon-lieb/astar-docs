@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # DEXでASTRを購入
 
-Astar Networkには、DEXがいくつかあります。 Arthswapはその一つです。 ArthswapはEVM上に構築されているため、EVM環境で接続する必要があります。
+Astar Networkには、DEXがいくつかあります。 Arthswapはその一つです。 ArthswapはEVM上に構築されているため、EVM環境で接続する必要があります。 Arthswap is one of them. Arthswap is built on EVM, therefore we need to interact in the EVM environment.
 
 ## MetaMaskのセットアップ
 
@@ -16,7 +16,7 @@ Metamask拡張機能を開く-> 設定 -> ネットワーク -> ネットワー�
 
 ## EthereumのアセットをAstar Networkにブリッジ
 
-ASTRを購入するには、スワップに使用できる他のアセットが必要です。 wETH、USDT、USDCなどのEthereumアセットをAstar Networkに橋渡しするのは一つの手です。
+wASTRを入手したので、ASTRにスワップできます。 ASTRを購入するには、スワップに使用できる他のアセットが必要です。 wETH、USDT、USDCなどのEthereumアセットをAstar Networkに橋渡しするのは一つの手です。
 
 1. [http://app.arthswap.org/#/swap](http://app.arthswap.org/#/swap) に移動します。
 2. 「ブリッジ」をクリックすると、 [https://cbridge.celer.network/#/transfer](https://cbridge.celer.network/#/transfer) に移動します。
@@ -32,7 +32,6 @@ ASTRを購入するには、スワップに使用できる他のアセットが�
 1. [http://app.arthswap.org/#/swap](http://app.arthswap.org/#/swap) に移動し、Metamaskを接続します。
 2. USDTからwASTRへのスワップを選択し、必要な量を入力します。
 3. スワップを実行し、トランザクションに署名します。
-4. wASTRを入手したので、ASTRにスワップできます。
-5. これであなたのウォレットにはASTRトークンが入っています。
+4. これであなたのウォレットにはASTRトークンが入っています。
 
-ASTRをMetamaskで保有しており、dAppにステークにしたい場合はPolkadot.jsに送信することができます。 前のチュートリアルを参照してください。
+ASTRをMetamaskで保有しており、dAppにステークにしたい場合はPolkadot.jsに送信することができます。 前のチュートリアルを参照してください。 Please refer the previous tutorials.
