@@ -4,10 +4,9 @@ sidebar_position: 3
 
 # モバイル端末で Astar ウォレットを作成する
 
-**このガイドでは、EVMとNativeの両方のAstar/Shidenウォレットのセットアップをサポートします。**
----
+## **このガイドでは、EVMとNativeの両方のAstar/Shidenウォレットのセットアップをサポートします。**
 
-[Nova Wallet](https://novawallet.io/)のような Astar Native 環境をサポートするいくつかのモバイルウォレットがあります。[Math Wallet](https://mathwallet.org/en-us/) 、 [SubWallet](https://subwallet.app/)、 [Metamask](https://metamask.io/download/) がAstar EVMをサポートしています。 このチュートリアルでは、NativeとEVMの両方をサポートしているため、Math Walletを使用します。
+[Nova Wallet](https://novawallet.io/)のような Astar Native 環境をサポートするいくつかのモバイルウォレットがあります。[Math Wallet](https://mathwallet.org/en-us/) 、 [SubWallet](https://subwallet.app/)、 [Metamask](https://metamask.io/download/) がAstar EVMをサポートしています。 このチュートリアルでは、NativeとEVMの両方をサポートしているため、Math Walletを使用します。 In this tutorial, we will use Math Wallet since it supports both Native and EVM.
 
 1. AndroidまたはiOSのいずれかに [Math Wallet](https://mathwallet.org/en-us/) をダウンロードしてください。
 2. Native には Astar を選択し、EVM には Astar EVM を選択します。
@@ -20,11 +19,9 @@ sidebar_position: 3
 
 ![image](https://user-images.githubusercontent.com/37278708/199640362-e22c2328-0d5a-472a-acbf-c5b357c23339.png)
 
-
 7. 次の画面で、正しいSeedフレーズがあることを確認し、「confirm」をクリックします。
 
 ![image](https://user-images.githubusercontent.com/37278708/199640403-1b8091b6-9e65-4aef-920c-751698682c55.png)
-
 
 8. あなたのAstarウォレットの準備ができました。
 9. dAppブラウザをクリックすると、 [Astar Portal](https://portal.astar.network/) を使用してdApp Staking(Astar Nativeのみ)を使用たりし、NativeからEVMへまたその逆に [トークンを転送](https://docs.astar.network/docs/user-guides/transfer-tokens) したりできます。
@@ -35,4 +32,4 @@ sidebar_position: 3
 
 ---
 
-以上です。**念のため**、Seed フレーズとパスワードを安全な場所に保存してください。 これを誰とも共有しないでください！
+以上です。**念のため**、Seed フレーズとパスワードを安全な場所に保存してください。 これを誰とも共有しないでください！ Don't share this with anyone!
