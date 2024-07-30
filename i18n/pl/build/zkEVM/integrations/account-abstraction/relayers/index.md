@@ -17,8 +17,3 @@ Meta transactions allow users to perform Ethereum transactions without having ET
 **Sponsorship:** Sponsors cover transaction fees. In this context, the sponsor could be considered a specific type of Relayer that willingly pays transaction fees on behalf of users without expecting reimbursement.
 
 <br/>
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>
