@@ -12,11 +12,12 @@ import Figure from "/src/components/figure"
 
 ## 自動的に設定
 
-あなたのウォレットにAstar zkEVMネットワークを自動的に追加するには、以下のオプションのいずれかを使用できます:
 
+あなたのウォレットにAstar zkEVMネットワークを自動的に追加するには、以下のオプションのいずれかを使用できます:
 - **[Astar Portal](https://portal.astar.network/astar-zkevm)**  - **Astar zkEVM**ネットワークに切り替えると、Astar PortalはネットワークをあなたのEVMウォレットに変更および追加するように促します。
-- **[ChainList](https://chainlist.org/)** - ChainListでAstar zkEVMを見つけることができます _(ID: `3776`)_、それをあなたのEVMウォレットに追加することができます。
+- **[ChainList](https://chainlist.org/)** - ChainListでAstar zkEVMを見つけることができます *(ID: `3776`)*、それをあなたのEVMウォレットに追加することができます。
 - **[Astar zkEVM Block Explorer](https://astar-zkevm.explorer.startale.com/)** - Block Explorerページの下部に、Astar zkEVMをあなたのウォレットに追加するオプションがあります。
+
 
 ## 手動で設定
 

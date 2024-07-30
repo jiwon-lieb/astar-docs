@@ -1,13 +1,14 @@
 ---
 sidebar_position: 2
 title: Ethereum からAstar zkEVM へブリッジ
+sidebar_label: Bridge Astar <> Ethereum
 ---
 
 import Figure from "/src/components/figure"
 
 # Ethereum および他の EVM ベースのチェーンから Astar zkEVM へのブリッジ
 
-このページでは、**Astar zkEVM**と**Ethereum メインネット**および他の EVM ベースのチェーン間で`ETH`および他の`ERC20`資産を転送する方法について説明します。zkEVM への資産のブリッジには 2 つのオプションがあります。 There are two options for bridging assets to the zkEVM:
+このページでは、**Astar zkEVM**と**Ethereum メインネット**および他の EVM ベースのチェーン間で`ETH`および他の`ERC20`資産を転送する方法について説明します。zkEVM への資産のブリッジには 2 つのオプションがあります。
 
 ## Astar Portal を使用した転送:
 
@@ -26,7 +27,7 @@ import Figure from "/src/components/figure"
 ### EthereumからAstar zkEVMへ
 
 1. **送信元ネットワーク**として `Ethereum` が選択されていること、そして**送信先ネットワーク**として `Astar zkEVM` が選択されていることを確認します。
-   転送するETHの量を入力した後、 `Bridge` ボタンを押します。
+転送するETHの量を入力した後、 `Bridge` ボタンを押します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_4.png').default} width="100%" />
 
@@ -36,23 +37,20 @@ import Figure from "/src/components/figure"
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_5.png').default} width="70%" />
 
 :::info
-The transfer can take between 10 and 30 minutes, depending on Ethereum network usage.
+転送には、Ethereumネットワークの使用状況に応じて、10分から30分かかる場合があります。
 
-トランザクションがあなたのウォレット拡張機能で確認されたら、Astar Portal と MetaMask が Astar zkEVM ネットワーク上のあなたの残高を更新するのに**約 5-10 分**かかります。
-:::
+ウォレット拡張機能でトランザクションが確認されると、Astar PortalとMetaMaskがAstar zkEVMネットワーク上での残高を更新するまでに約**5-10分**かかります。
 :::
 
 ### Astar zkEVMからEthereumへ
 
 :::warning
 これは二段階のプロセスであり、Ethereumのメインネットでトークンを請求し、対応するガス料金を支払う必要があります。
-手数料をカバーするために、メインネット上に十分な `ETH` トークンを持っていることを確認してください。\
-Make sure you have enough `ETH` tokens on mainnet to cover the fees.
+手数料をカバーするために、メインネット上に十分な `ETH` トークンを持っていることを確認してください。
 :::
 
-1. **送信元ネットワーク**として `Astar zkEVM` が選択されていること、そして**送信先ネットワーク**として `Ethereum` が選択されていることを確認します。
-   転送するETHの量を入力した後、 `Bridge` ボタンを押します。
-2. Bridge Astar <> Ethereum
+1. **送信元ネットワーク**として `Astar zkEVM` が選択されていること、そして**送信先ネットワーク**として `Ethereum` が選択されていることを確認します。 
+転送するETHの量を入力した後、 `Bridge` ボタンを押します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_6.png').default} width="100%" />
 
@@ -67,18 +65,17 @@ Make sure you have enough `ETH` tokens on mainnet to cover the fees.
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_8.png').default} width="70%" />
 
-:::info
-The transfer can take between 10 and 30 minutes, depending on Ethereum network usage.
+:::info 転送は、Ethereum ネットワークの使用状況により、10 分から 30 分かかることがあります。
 
-ウォレット拡張機能でトランザクションが確認されると、Astar PortalとMetaMaskがAstar zkEVMネットワーク上での残高を更新するまでに約**5-10分**かかります。
-:::
+トランザクションがあなたのウォレット拡張機能で確認されたら、Astar Portal と MetaMask が Astar zkEVM ネットワーク上のあなたの残高を更新するのに**約 5-10 分**かかります。
 :::
 
 ## Layerswap を使用した転送:
 
-2つ目のオプションは、**[Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)** を使用することです。これは、中央集権型取引所、ブロックチェーン、銀行間で暗号資産を数分で転送する信頼できるソリューションです。[詳細情報](https://docs.layerswap.io/user-docs)。 [More information](https://docs.layerswap.io/user-docs).
+2つ目のオプションは、**[Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)** を使用することです。これは、中央集権型取引所、ブロックチェーン、銀行間で暗号資産を数分で転送する信頼できるソリューションです。[詳細情報](https://docs.layerswap.io/user-docs)。
 
-_第三者のアプリケーションを利用することによって生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、Astar Foundationは一切の責任を負わないことをご了承ください。_
+
+*第三者のアプリケーションを利用することによって生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、Astar Foundationは一切の責任を負わないことをご了承ください。*
 
 :::info
 現時点では、Layerswapはクロスチェーン転送に**ETHトークン**のみをサポートしています！
@@ -89,7 +86,7 @@ _第三者のアプリケーションを利用することによって生じる�
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Layerswap_1.png').default} width="80%" />
 
 2. 資産を転送したい**送信元ネットワーク**または**中央集権型取引所**を選択し、**送信先ネットワーク**には `Astar zkEVM` を選択します。
-3. 転送したいETHの量を入力します。また、資産を送信したいアドレスも選択できます。 You can also choose the address to which you want to send your assets;
+3. 転送したいETHの量を入力します。また、資産を送信したいアドレスも選択できます。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Layerswap_2.png').default} width="80%" />
 

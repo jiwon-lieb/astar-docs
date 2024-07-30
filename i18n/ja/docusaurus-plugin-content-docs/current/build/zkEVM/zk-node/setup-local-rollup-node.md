@@ -5,24 +5,22 @@ sidebar_label: ローカル Rollup ノードのセットアップ
 ---
 
 :::info
-
 ZK の Rollup バージョンは、Astar zKatana 環境で使用されます。
-
 :::
 
 :::warning
 [issue](https://github.com/etherum/go-ethereum/issues/27274) が開いているため、ローカルノードの実行中に問題が発生する可能性があります。
 :::
 
-開発者が、ユーザーや開発者自身を不必要なリスクにさらすことなく、**Astar zkEVM**のようなブロックチェーン技術を開発するためのネットワークを徹底的にテストできることは重要です。 開発者が、スマートコントラクトをテストしたり、新しいコードを試したり、ローカルマシン上でネットワークを使って遊んだりできる環境が存在するべきです。 Developers should be able to test their smart contracts, experiment with new code, and play around with the network on their local machines.
+開発者が、ユーザーや開発者自身を不必要なリスクにさらすことなく、**Astar zkEVM**のようなブロックチェーン技術を開発するためのネットワークを徹底的にテストできることは重要です。 開発者が、スマートコントラクトをテストしたり、新しいコードを試したり、ローカルマシン上でネットワークを使って遊んだりできる環境が存在するべきです。
 
-Astar zkEVM has a local development environment setup for this reason. This tutorial will help you create a local single-node zkEVM blockchain with no connections to external peers. It only exists on your local machine.
+このため、Astar zkEVMはローカル開発環境を提供しています。 このチュートリアルは、外部のピアノードへの接続がないローカルのシングルノードzkEVMブロックチェーンを作成するのに役立ちます。 お手持ちのローカルマシン上にのみ存在するブロックチェーンということです。
 
 :::caution
 
-現在、zkProverはARMアーキテクチャのMacでは動作しません。 Windowsユーザーの場合、WSL/WSL2の使用は非推奨です。 For Windows users, using WSL/WSL2 is not recommended.
+現在、zkProverはARMアーキテクチャのMacでは動作しません。 Windowsユーザーの場合、WSL/WSL2の使用は非推奨です。
 
-残念ながら、Apple M1 チップは現時点ではサポートされていません - zkProver の最適化には特定の Intel 命令が必要だからです。 つまり、AMDなどのOSに関係なく、M1以外のコンピュータでも動作しないものがあることを意味します。 This means some non-M computers won't work regardless of the OS, for example: AMD.
+残念ながら、Apple M1 チップは現時点ではサポートされていません - zkProver の最適化には特定の Intel 命令が必要だからです。 つまり、AMDなどのOSに関係なく、M1以外のコンピュータでも動作しないものがあることを意味します。
 
 :::
 
@@ -31,13 +29,13 @@ Astar zkEVM has a local development environment setup for this reason. This tuto
 - zkEVM ノードデータベース
 - エクスプローラーデータベース
 - L1ネットワーク
-- Prover
+- プルーバー
 - zkEVM ノードコンポーネント
 - Explorers
 
 ## Prerequisites
 
-現在のバージョンの環境におけるチュートリアルには、前もってコンピューターに `go`、`docker`、`docker-compose`がインストールされている必要があります。 インストールされていない場合は、以下のリンクを確認してください: If you don’t have these installed, check out the links provided below:
+現在のバージョンの環境におけるチュートリアルには、前もってコンピューターに `go`、`docker`、`docker-compose`がインストールされている必要があります。 インストールされていない場合は、以下のリンクを確認してください:
 
 - [https://go.dev/doc/install](https://go.dev/doc/install)
 - [https://www.docker.com/get-started](https://www.docker.com/get-started)
@@ -48,7 +46,7 @@ Astar zkEVM has a local development environment setup for this reason. This tuto
 - zkEVM ノード: 16GB RAM (4コアCPU搭載)
 - zkProver: 1TB RAM (128コアCPU搭載)
 
-もし本格的なzkProverを実行したい場合は、少なくとも1TBのRAMが必要です。 Proverの要件を満たすことができない場合でも、zkNodeを実行することは可能です。 このため、Astar zkEVMはローカル開発環境を提供しています。 このチュートリアルは、外部のピアノードへの接続がないローカルのシングルノードzkEVMブロックチェーンを作成するのに役立ちます。 お手持ちのローカルマシン上にのみ存在するブロックチェーンということです。
+もし本格的なzkProverを実行したい場合は、少なくとも1TBのRAMが必要です。 Proverの要件を満たすことができない場合でも、zkNodeを実行することは可能です。
 
 ## zkNode の設定
 
@@ -58,7 +56,7 @@ zkEVMノードのセットアップを開始する前に、Polygon zkEVM Github�
 git clone https://github.com/0xPolygonHermez/zkevm-node.git
 ```
 
-`zkevm-node` docker イメージは、少なくとも1回、加えてコードが変更されるたびにビルドする必要があります。 `zkevm-node`イメージをまだビルドしていない場合は、以下のコマンドを実行する必要があります: ネットワークのテストを開始する前に、ローカルのzkEVMノードにデータを追加しておくことが重要です。 `make run` コマンドは、環境を実行するために必要なコンテナを実行しますが、それ以外は実行しません。 つまり、**ローカルのL2ネットワークは基本的に空です**。
+`zkevm-node` docker イメージは、少なくとも1回、加えてコードが変更されるたびにビルドする必要があります。 `zkevm-node`イメージをまだビルドしていない場合は、以下のコマンドを実行する必要があります:
 
 ```bash
 make build-docker
@@ -66,7 +64,7 @@ make build-docker
 
 :::caution Docker イメージのビルド
 
-特定のバージョンの Testnet 実装では、正しく、かつ対応しているタグから設定ファイルを使用していることを確認してください。 例: **RC9イメージをビルドするには、RC9タグの設定ファイルを使用してください**。 For instance: **to build an RC9 image, use configuration files from RC9 tag**.
+特定のバージョンの Testnet 実装では、正しく、かつ対応しているタグから設定ファイルを使用していることを確認してください。 例: **RC9イメージをビルドするには、RC9タグの設定ファイルを使用してください**。
 
 すべてのタグはここにあります: <ins>**https\://github.com/0xPolygonHermez/zkevm-node/tags**</ins>
 
@@ -78,11 +76,11 @@ make build-docker
 
 :::warning
 
-すべてのデータは各ドッカーコンテナ内に保存されます。 つまり、コンテナを削除すると、データは失われます。 プルーバー
+すべてのデータは各ドッカーコンテナ内に保存されます。 つまり、コンテナを削除すると、データは失われます。
 
 :::
 
-`test/`ディレクトリには、開発とデバッグのためのスクリプトとファイルが含まれています。 ローカルマシンの作業ディレクトリを `test/` に移動します。 Change the working directory to `test/` on your local machine.
+`test/`ディレクトリには、開発とデバッグのためのスクリプトとファイルが含まれています。 ローカルマシンの作業ディレクトリを `test/` に移動します。
 
 ```bash
 cd test/
@@ -108,13 +106,13 @@ make restart
 
 ## 設定パラメーター
 
-シンクロナイザーは、主にEthereumから、またそれに加えて**シーケンサー**の情報発信メカニズムを介して、ネットワークアップデートを定期的にpullし、最新の状態を維持します。 設定により特別な指定がない限り、シンクロナイザーの**デフォルト同期率**は**2秒**ごとになります。 Unless otherwise specified in the setup, the Synchronizer's **default syncing rate** is every **2 seconds**.
+シンクロナイザーは、主にEthereumから、またそれに加えて**シーケンサー**の情報発信メカニズムを介して、ネットワークアップデートを定期的にpullし、最新の状態を維持します。 設定により特別な指定がない限り、シンクロナイザーの**デフォルト同期率**は**2秒**ごとになります。
 
 **秘密鍵の保存**に用られる**キーストア**ファイルは、シーケンサーとアグリゲータを実行するために通常必要になりますが、シンクロナイザー/RPC-セットアップには必要ありません。
 
 :::info
 
-L1トランザクションが送信されない処理など、**Keystore**ファイルが必要とされるべきではないにも関わらず、ノードを実行するために必要とされる、不便な状況があります。 信頼できるシーケンサーとアグリゲーターが活動しているため、**キーストアはMango Testnetでは必要ありません**。 **Keystore is not required in the Mango Testnet** as it uses a trusted sequencer and aggregator.
+L1トランザクションが送信されない処理など、**Keystore**ファイルが必要とされるべきではないにも関わらず、ノードを実行するために必要とされる、不便な状況があります。 信頼できるシーケンサーとアグリゲーターが活動しているため、**キーストアはMango Testnetでは必要ありません**。
 
 これは、zkEVMネットワークが分散性の実装を達成したときに改めて導入が検討されます。
 
@@ -122,7 +120,7 @@ L1トランザクションが送信されない処理など、**Keystore**ファ
 
 ## サンプルデータ
 
-It's important to populate your local zkEVM node with some data before you start testing out the network. The `make run` command will execute the containers required to run the environment, but it will not execute anything else. **Your local L2 network will be essentially empty**.
+ネットワークのテストを開始する前に、ローカルのzkEVMノードにデータを追加しておくことが重要です。 `make run` コマンドは、環境を実行するために必要なコンテナを実行しますが、それ以外は実行しません。 つまり、**ローカルのL2ネットワークは基本的に空です**。
 
 ネットワーク上に、すでにデプロイされているサンプルデータが必要な場合は、次のスクリプトを使用できます。
 
@@ -154,16 +152,14 @@ MetaMaskを設定している間、ネットワークが動作している必要
 5. L2ネットワークの情報を入力してください
    - **ネットワーク名:** Astar zkEVM - Local
    - **新しい RPC URL:** [http://localhost:8123](http://localhost:8123) \* **ChainID:** 1001
-   - **ChainID:** 1001
    - **通貨記号:** ETH
-   - **ブロックエクスプローラのURL:** [http://localhost:4000](http://localhost:4000)6.
-6. **保存**をクリックします
-7. **ネットワークを追加**ボタンをクリックしてください
-8. L1ネットワークの情報を入力してください
+   - **ブロックエクスプローラのURL:** [http://localhost:4000](http://localhost:4000)6. **保存**をクリックします
+6. **ネットワークを追加**ボタンをクリックしてください
+7. L1ネットワークの情報を入力してください
    - **ネットワーク名:** Geth - ローカル
    - **新しい RPC URL:** [http://localhost:8545](http://localhost:8545) \* **ChainID:** 1337
-   - **ChainID:** 1337
    - **通貨記号:** ETH
-9. **保存**をクリックします
+8. **保存**をクリックします
 
 これで、ローカルのzkEVMネットワークとやり取りし、MetaMaskウォレットからトランザクションに署名できるようになりました。
+

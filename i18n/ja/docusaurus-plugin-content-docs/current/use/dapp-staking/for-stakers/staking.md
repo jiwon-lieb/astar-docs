@@ -28,13 +28,13 @@ Periodの終わりに、トークンはすべてのdAppsからステーキング
 
 ### プロジェクトを見つける
 
-:::tip
+
 
 Staked TVL およびプロジェクト リーダーボードはページの上部にあります。
 
 :::
 
-プロジェクトカードをクリックすると、より詳しい情報が表示され、コミュニティへのアクセスやチームプロファイルの閲覧が可能になります。 また、私たちの[フォーラム](https://forum.astar.network/)、[DefilLama](https://defillama.com/)や[DappRadar](https://dappladar.com/)で役立つリソースを見つけることもできます。 You can also find useful resources on our [forum](https://forum.astar.network/) or check [DefilLama](https://defillama.com/) or [DappRadar](https://dappradar.com/).
+プロジェクトカードをクリックすると、より詳しい情報が表示され、コミュニティへのアクセスやチームプロファイルの閲覧が可能になります。 また、私たちの[フォーラム](https://forum.astar.network/)、[DefilLama](https://defillama.com/)や[DappRadar](https://dappladar.com/)で役立つリソースを見つけることもできます。
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Projects_page.png').default } width="100%" />
 
@@ -42,24 +42,22 @@ Staked TVL およびプロジェクト リーダーボードはページの上�
 
 :::important
 
-dApp Stakingを使用する前に、[こちら](/docs/use/dapp-staking/for-stakers/)に記載されているすべてのパラメータとルールを理解していることを確認してください。\
-An address can only stake on a maximum of 16 contracts (dApps).
+dApp Stakingを使用する前に、[こちら](/docs/use/dapp-staking/for-stakers/)に記載されているすべてのパラメータとルールを理解していることを確認してください。
+
 :::
 
 1. dApp Stakingページでは、以下の操作が可能です：
 
-- Click on the `Choose dApp(s)` button;
+- `Vote/Stake today` ボタンをクリックします;
 - お気に入りのプロジェクトを選択し、プロジェクトページの `Vote & Stake` ボタンをクリックしてください;
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Vote_Page.png').default } width="100%" />
 
-2. You can choose up to 16 projects that you would like to support;\
-   After making your selection, click `Done` to proceed to the next step;
+2. 投票ページにアクセスすると、支援したいプロジェクトを好きなだけ選択することができます;
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page.png').default } width="85%" />
 
-3. ステーキングするには、選択したdApp(s)に対して、希望するトークン量を入力します。 それぞれのdAppに対して、同じ量または異なる量のトークンをステーキングすることができます。 This may be the same or a different amount for each.\
-   After entering the amount(s), click `Next` to continue;
+3. ステーキングするには、選択したdApp(s)に対して、希望するトークン量を入力します。 それぞれのdAppに対して、同じ量または異なる量のトークンをステーキングすることができます。
 
 :::tip
 
@@ -71,11 +69,8 @@ An address can only stake on a maximum of 16 contracts (dApps).
 
 :::note
 
-You can see how many tokens you have available to stake from **transferable** or **locked balances** at the bottom of the page;
+`Confirm` ボタンの上のセクションで、譲渡可能またはロックされた残高から利用可能なトークンの数を確認できます;
 
 :::
 
-5. Review your choice and confirm your decisions by clicking on `Confirm` and sign the transaction on the network;\
-   If you have unclaimed rewards, clicking `Confirm` will claim and transfer them to your address.
-
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page_3.png').default } width="85%" />
+5. `Confirm` をクリックし、ネットワーク上のトランザクションに署名してください;

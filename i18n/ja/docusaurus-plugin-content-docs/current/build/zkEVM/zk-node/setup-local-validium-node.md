@@ -20,6 +20,7 @@ import cdk13 from '/docs/build/zkEVM/img/add-cdk-13.png'
 import cdk14 from '/docs/build/zkEVM/img/add-cdk-14.png'
 import cdk15 from '/docs/build/zkEVM/img/add-cdk-15.png'
 
+
 ## Validium
 
 このクイックスタートガイドでは、ローカルマシン上にCDK Validiumを設定し、以下のコンポーネントを設定して実行する方法を示します：
@@ -34,10 +35,10 @@ import cdk15 from '/docs/build/zkEVM/img/add-cdk-15.png'
 - DAC: データ可用性サービス、DACセットアップ委員会
 - zkEVMブリッジサービスとUI
 
-:::note
+:::note 
 
-The documentation describes standard deployments.
-Edit the configuration files to implement your own custom setups.
+このドキュメンテーションでは、標準的なデプロイメントを説明しています。
+設定ファイルを編集して独自の設定を実装します。
 
 :::
 
@@ -57,12 +58,12 @@ CDKはARMベースのMacをサポートしていません。
 
 ### ソフトウェア要件
 
-現在の環境のチュートリアルでは、あらかじめマシンに`go`と`docker`がインストールされている必要があります。これらがインストールされていない場合は、以下のリンクをご覧ください： If you don’t have these installed, check out the links provided below:
+現在の環境のチュートリアルでは、あらかじめマシンに`go`と`docker`がインストールされている必要があります。これらがインストールされていない場合は、以下のリンクをご覧ください：
 
 - [Go](https://go.dev/doc/install)
 - [Docker and Docker compose](https://docs.docker.com/engine/install/ubuntu/)
 
-:::note
+:::note 
 
 このドキュメントでは、docker compose v2を使用しています。
 
@@ -70,8 +71,7 @@ CDKはARMベースのMacをサポートしていません。
 
 ## make をインストール
 
-Ubuntuでmakeをインストール:
-
+Ubuntuでmakeをインストール: 
 ```bash
 sudo apt install make
 ```
@@ -86,7 +86,6 @@ cd zkValidium-quickstart
 ```
 
 例をコピーして`.env`ファイルを作成：
-
 ```bash
 cp .env.example .env
 ```
@@ -94,25 +93,21 @@ cp .env.example .env
 ## ローカルで Validium を起動
 
 Docker Hubから必要なDockerイメージをプル：
-
 ```bash
 sudo docker compose pull
 ```
 
 イメージをプルした後、ローカルのCDK validiumを起動：
-
 ```bash
 sudo make run
 ```
 
 すべてのサービスが正常に動作していることを確認するため、各コンテナのステータスを確認：
-
 ```bash
 sudo docker compose ps
 ```
 
 このような出力が表示されます：
-
 <details>
 <summary>コンテナのステータス詳細</summary>
 
@@ -154,31 +149,27 @@ zkevm-event-db                     "docker-entrypoint.s…"   Up 12 minutes     
 zkevm-pool-db                      "docker-entrypoint.s…"   Up 12 minutes             0.0.0.0:5433->5432/tcp, :::5433->5432/tcp
 zkevm-state-db                     "docker-entrypoint.s…"   Up 12 minutes             0.0.0.0:5432->5432/tcp, :::5432->5432/tcp
 ```
-
 </details>
 
-サービスが動作していない場合（つまり、 **Exit 1** の状態にある場合）、ログを使用してさらに調査：
 
+サービスが動作していない場合（つまり、 **Exit 1** の状態にある場合）、ログを使用してさらに調査：
 ```bash
 sudo docker compose logs <container_name>
 ```
-
 :::info
 
-dockerコマンドの出力で **\\<container_name>** を見つけます。
+dockerコマンドの出力で **\<container_name>** を見つけます。
 
 :::
 
 ### 便利なコマンド
 
 CDK Validiumを停止するには：
-
 ```bash
 sudo make stop
 ```
 
 すべてのサービスを再起動するには：
-
 ```bash
 sudo make restart
 ```
@@ -189,7 +180,7 @@ sudo make restart
 
 :::
 
-## Validium をテスト
+ ## Validium をテスト
 
 [localhost](http://localhost) に移動してブロックエクスプローラが動作していることを確認します。
 
@@ -198,6 +189,7 @@ sudo make restart
 <div style={{textAlign: 'center'}}>
   <img src={cdk1} style={{width: 1000}} />
 </div>
+
 
 ## Web3ウォレットにネットワークを追加
 
@@ -224,7 +216,7 @@ MetaMaskの手順に従って、[ネットワークを手動で設定](https://s
 
 :::
 
-[アカウントをMetaMaskにインポートします](https://support.metamask.io/hc/en-us/articles/360015489331-How-to-import-an-account)。残高は100000 POLと表示されます： The balance shows up as 100000 POL:
+[アカウントをMetaMaskにインポートします](https://support.metamask.io/hc/en-us/articles/360015489331-How-to-import-an-account)。残高は100000 POLと表示されます：
 
 <div style={{textAlign: 'center'}}>
   <img src={cdk4} style={{width: 1000}} />
@@ -250,7 +242,7 @@ MetaMaskの **エクスプローラーで表示（View on explorer）** をク�
 
 <br/><br/>
 
-:::warning[Troubleshooting 以前にインポートしたアカウント`0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266`を選択します。接続が完了すると、このようなページが表示されます。
+:::warning[Metamaskでの取引が詰まる問題のトラブルシューティング]
 
 取引が詰まる問題に遭遇した場合、それはおそらくnonce設定が間違っているためです。
 
@@ -282,7 +274,7 @@ L1ネットワークに切り替えると、以前にインポートしたアカ
 
 **Connect a wallet > MetaMask** をクリックします。
 
-:::note
+:::note 
 
 このビューは2回目以降は表示されません。
 
@@ -292,7 +284,7 @@ L1ネットワークに切り替えると、以前にインポートしたアカ
   <img src={cdk9} style={{width: 1000}} />
 </div>
 
-Select the previously imported account `0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266`. Once you are connected, you should see a page like this:
+以前にインポートしたアカウント`0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266`を選択します。接続が完了すると、このようなページが表示されます。
 
 <div style={{textAlign: 'center'}}>
   <img src={cdk10} style={{width: 1000}} />
@@ -324,7 +316,7 @@ MetaMaskのネットワークをあなたのValidiumチェーンに切り替え�
 
 金額を入力し、同じプロセスを経て、資金をL1に戻すためのブリッジを作成します。
 
-:::note
+:::note 
 
 あなたは、前にL1からL2にブリッジしたもの以上の資金を戻すことはできません。
 
@@ -336,7 +328,7 @@ L2からL1へのブリッジは、L1からL2へのものとは少し異なり、
   <img src={cdk14} style={{width: 1000}} />
 </div>
 
-**Finalise** をクリックし、トランザクションを承認します（注：MetaMaskは、最初にL1ネットワークに切り替えるようにとのウィンドウをポップアップします）。その後、ブリッジが完了したら、このように表示されます： Then you will see this once the bridging is completed:
+**Finalise** をクリックし、トランザクションを承認します（注：MetaMaskは、最初にL1ネットワークに切り替えるようにとのウィンドウをポップアップします）。その後、ブリッジが完了したら、このように表示されます：
 
 <div style={{textAlign: 'center'}}>
   <img src={cdk15} style={{width: 1000}} />
