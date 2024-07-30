@@ -80,7 +80,7 @@ const sidebars = {
     {
       type: "category",
       label: "Manage Wallets",
-      link: { type: "doc", id: "use/manage-walets/index"},
+      link: { type: "doc", id: "use/manage-wallets/index"},
       items: [
         "use/manage-wallets/wallet-providers/index",
       ],
