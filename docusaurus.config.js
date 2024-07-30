@@ -86,7 +86,20 @@ const config = {
           },
           {
             type: "doc",
+            docId: "build/index",
+            sidebarID: "buildSidebar",
+            position: "left",
+            label: "Build",
+          },
+          {
+            type: "doc",
             docId: "build/zkEVM/quickstart",
+            position: "left",
+            label: "zkEVM",
+          },
+          {
+            type: "doc",
+            docId: "build/dapp-staking",
             position: "left",
             label: "zkEVM",
           },

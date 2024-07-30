@@ -1,3 +1,7 @@
+---
+displayed_sidebar: 'buildSidebar'
+---
+
 import build from '/docs/build/img/build.png'
 
 # Build on Astar

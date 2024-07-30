@@ -85,10 +85,20 @@ const sidebars = {
         "use/manage-wallets/wallet-providers/index",
       ],
     },
-    
-
-    ...commonSidebar,
-  ]
+  ...commonSidebar,
+  ],
+  buildSidebar: [
+    "build/index",
+    {
+      type: "category",
+      label: "Introduction",
+      link: { type: "doc", id: "build/Introduction/index"},
+      items: [
+        "build/Introduction/polkadot_relay",
+      ],
+    },
+   ...commonSidebar,
+  ],
   }
 
 
