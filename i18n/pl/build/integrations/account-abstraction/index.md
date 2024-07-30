@@ -25,8 +25,3 @@ ERC-4337, also known as EIP-4337.
 - Banana Wallet SDK
 
 <br/>
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>
