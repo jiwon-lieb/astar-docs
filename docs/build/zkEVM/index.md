@@ -23,7 +23,4 @@ The following sections walk through the process of setting up a development envi
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

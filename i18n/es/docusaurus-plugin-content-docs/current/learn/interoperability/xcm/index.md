@@ -30,7 +30,4 @@ Se anima a los lectores y desarrolladores a revisar la documentación oficial pa
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

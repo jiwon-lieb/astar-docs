@@ -23,7 +23,4 @@ Astar zkEVM は、Polygon の Chain Development Kit (チェーン開発ツール
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

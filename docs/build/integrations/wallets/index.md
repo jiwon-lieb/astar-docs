@@ -6,7 +6,4 @@ If you are looking specifically for information about Account Abstraction based 
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

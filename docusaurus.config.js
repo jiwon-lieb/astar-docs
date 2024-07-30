@@ -9,14 +9,13 @@ const katex = require("rehype-katex");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Astar Docs",
-  tagline: "A comprehensive library of useful information about Astar Network",
-  url: "https://docs.astar.network",
+  url: "https://jiwon-lieb.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   favicon: "img/fav.png",
-  organizationName: "AstarNetwork", // Usually your GitHub org/user name.
-  projectName: "astar-docs", // Usually your repo name.
+  organizationName: "jiwon-lieb", // Usually your GitHub org/user name.
+  projectName: "jiwon-lieb.github.io", // Usually your repo name.
   plugins: ["docusaurus-plugin-sass"],
   markdown: {
     mermaid: true,
@@ -40,15 +39,10 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
+          sidebarCollapsible: true,
           editUrl: "https://github.com/AstarNetwork/astar-docs/tree/main/",
           remarkPlugins: [math],
           rehypePlugins: [katex],
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: "https://github.com/AstarNetwork/astar-docs/tree/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
@@ -60,10 +54,9 @@ const config = {
   //Enable multilanguage support. Portuguese added as first language
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "ja", "es"],
+    locales: ["en"],
     localeConfigs: {
-      en: { htmlLang: "en-US" },
-      ja: {},
+      en: { htmlLang: "en-US" }
     },
   },
   themeConfig:
@@ -78,31 +71,23 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "getting-started",
+            docId: "learn/index",
+            sidebarID: "learnSidebar",
             position: "left",
-            label: "Docs",
+            label: "Learn",
           },
           {
             type: "doc",
-            docId: "build/index",
+            docId: "use/index",
+            sidebarID: "useSidebar",
             position: "left",
-            label: "Start Building",
+            label: "Use",
           },
           {
             type: "doc",
             docId: "build/zkEVM/quickstart",
             position: "left",
             label: "zkEVM",
-          },
-          {
-            to: "https://medium.com/astar-network",
-            label: "Medium",
-            position: "left",
-          },
-          {
-            to: "https://www.youtube.com/channel/UC36JgEF6gqatVSK9xlzzrvQ",
-            label: "Youtube",
-            position: "left",
           },
           {
             type: "localeDropdown",
@@ -150,6 +135,10 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/AstarNetwork",
+              },
+              {
+                label: "YouTube",
+                href: "https://www.youtube.com/channel/UC36JgEF6gqatVSK9xlzzrvQ",
               },
             ],
           },

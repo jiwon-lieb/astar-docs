@@ -8,7 +8,3 @@ import Figure from '/src/components/figure'
 
 ### Pages of interest:
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>

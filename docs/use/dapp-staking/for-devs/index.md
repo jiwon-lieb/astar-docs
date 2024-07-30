@@ -66,8 +66,5 @@ In case you have any questions, please check the [FAQ page](/docs/learn/dapp-sta
 
 ### Other pages may be of interest:
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>
 

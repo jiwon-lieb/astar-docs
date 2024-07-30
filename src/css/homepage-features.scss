@@ -58,6 +58,16 @@
   content: url('../../static/img/node.svg');
 }
 
+.wasm::before {
+  content: url('../../static/img/wasm.svg');
+}
+
+.zkevm {
+  content: url('../../static/img/zkevm.png') !important;
+  height: 38px;
+  width: 38px;
+}
+
 .ecosystem::before {
   content: url('../../static/img/ecosystem.svg');
 }

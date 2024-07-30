@@ -4,8 +4,5 @@ Here you will find common services and tools available to developers building dA
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>
 

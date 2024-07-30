@@ -87,7 +87,4 @@ Period 中のボーナス報酬は、期間が終了した後にのみ請求す�
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

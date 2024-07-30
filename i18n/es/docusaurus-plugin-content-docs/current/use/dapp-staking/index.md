@@ -49,7 +49,4 @@ En las siguientes secciones, encontrará toda la ayuda que necesita para interac
 
 También encontrará guías para dApp Staking V2 como referencia hasta la transición completa a dApp Staking v3.
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

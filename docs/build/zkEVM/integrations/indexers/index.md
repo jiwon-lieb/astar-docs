@@ -26,8 +26,5 @@ Take a look at any of the following for your own custom GraphQL indexing needs:
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>
 

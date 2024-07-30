@@ -8,7 +8,4 @@ Astar zkEVMについての詳しい説明については、[学習セクショ�
 
 ### おすすめのページ:
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

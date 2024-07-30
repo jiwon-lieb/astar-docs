@@ -15,36 +15,47 @@ const FeatureList: FeatureItem[] = [
   {
     title: <Translate>Learn About Astar Network</Translate>,
     link: '/docs/learn',
-    iconClass: 'docs',
+    iconClass: 'aboutastar',
     description: (
       <>
         <Translate>
-        Explains our foundations and provides comprehensive insights into the inner workings of Astar network. 
+        Learn about our foundations and gain insights into the inner workings of Astar Network. 
         </Translate>
       </>
     ),
   },
   {
-    title: <Translate>Build</Translate>,
-    link: '/docs/build/',
-    iconClass: 'wrench',
+    title: <Translate>WASM Stack</Translate>,
+    link: '/docs/build/wasm',
+    iconClass: 'wasm',
     description: (
       <>
         <Translate>
-          Find all the resources you need to start testing, deploying,
-          and interacting with smart contracts on Astar networks.
+          Start testing, deploying, and interacting with WebAssembly (WASM) smart contracts on Astar Network.
         </Translate>
       </>
     ),
   },
   {
-    title: <Translate>Build on Astar zkEVM</Translate>,
-    link: '/docs/build/zkEVM',
+    title: <Translate>EVM Stack</Translate>,
+    link: '/docs/build/evm',
     iconClass: 'evm',
     description: (
       <>
         <Translate>
-          Jump right into building on Astar zkEVM the Layer 2 scaling solution for Ethereum, powered by Polygon CDK.
+        Start testing, deploying, and interacting with EVM smart contracts on Astar network.
+        </Translate>
+      </>
+    ),
+  },
+  {
+    title: <Translate>Astar zkEVM Stack</Translate>,
+    link: '/docs/build/zkEVM',
+    iconClass: 'zkevm',
+    description: (
+      <>
+        <Translate>
+          Start building on Astar zkEVM, the Layer 2 scaling solution for Ethereum.
         </Translate>
       </>
     ),
@@ -56,8 +67,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         <Translate>
-          Earn tokens for yourself and your dApp by staking tokens and
-          registering your dApp with Astar’s dApp Staking.
+          Participate in Astar’s unique mechanism that benefits dApp developers, stakers, and users alike.
         </Translate>
       </>
     ),
@@ -69,47 +79,31 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         <Translate>
-          Explain how to run full nodes, collators, indexers, and everything you
-          need to know related to infrastructure.
+          Learn how to run full nodes, archive and collator nodes, and much more.
         </Translate>
       </>
     ),
   },
   {
-    title: <Translate>Learn Cross-Chain Message (XCM)</Translate>,
+    title: <Translate>Cross-Chain Message (XCM)</Translate>,
     link: '/docs/learn/interoperability/xcm/',
     iconClass: 'broadcast',
     description: (
       <>
         <Translate>
-          Explains how XCM is used in Astar and how developers can use it to
-          interact with the rest of the Polkadot network.
+          Learn how XCM ensures seamless interoperability for Astar and the rest of the Polkadot network.
         </Translate>
       </>
     ),
   },
   {
-    title: <Translate>Integrate Toolings</Translate>,
-    link: '/docs/build/integrations/',
-    iconClass: 'tool',
+    title: <Translate>Developer Toolings</Translate>,
+    link: '/docs/build/integrations',
+    iconClass: 'broadcast',
     description: (
       <>
         <Translate>
-          Contains relevant information about the wallets, bridges, indexers, and
-          oracles that are integrated with the network.
-        </Translate>
-      </>
-    ),
-  },
-  {
-    title: <Translate>User Guides</Translate>,
-    link: '/docs/use/',
-    iconClass: 'docs',
-    description: (
-      <>
-        <Translate>
-          Learn how to create different types of wallets, obtain tokens, and
-          manage your assets.
+          Wallets, bridges, indexers, oracles and much more, integrated with Astar Network.
         </Translate>
       </>
     ),

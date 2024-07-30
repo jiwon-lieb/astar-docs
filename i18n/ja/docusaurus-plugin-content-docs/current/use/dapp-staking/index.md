@@ -15,8 +15,3 @@ dApp Stakingの詳細については、[学習セクション](/docs/learn/dapp-
 以下のセクションでは、ステーカーまたはdAppオーナーとしてdApp Stakingを利用するために必要なすべてのヘルプを見つけることができます。
 
 dApp Staking v3への完全移行までは、dApp Staking V2のガイドも参照できます。
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>

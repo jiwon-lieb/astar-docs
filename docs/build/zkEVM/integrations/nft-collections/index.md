@@ -4,7 +4,3 @@ Deploying smart contracts of a specific token standard is necessary in order to 
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>
