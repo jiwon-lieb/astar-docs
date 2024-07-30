@@ -19,7 +19,7 @@ sidebar_position: 2
 
 1. Accounts -> `+ Multisig`を開く
 2. 使用可能な署名から、マルチシグに含める署名を選択する。
-3. しきい値を追加する。 しきい値 2 は、トランザクションに署名するために最低 2 人の署名者が必要であることを意味する。
+3. Add a threshold. しきい値を追加する。 しきい値 2 は、トランザクションに署名するために最低 2 人の署名者が必要であることを意味する。
 4. マルチシグウォレットに名前を付ける。
 5. 「Create」をクリックする。
 
@@ -28,5 +28,5 @@ sidebar_position: 2
 ## ウォレットのテスト
 
 1. 上記の通りマルチシグウォレットの作成を完了させる。
-2. マルチシグウォレットのテストには、まずShibuya testnetを利用することを推奨する。 自身のウォレットを接続することで、 [https://portal.astar.network](https://portal.astar.network) からSBYを取得できる。
+2. マルチシグウォレットのテストには、まずShibuya testnetを利用することを推奨する。 自身のウォレットを接続することで、 [https://portal.astar.network](https://portal.astar.network) からSBYを取得できる。 You can get SBY faucet from [https://portal.astar.network](https://portal.astar.network) by connecting your own wallet.
 3. SBYを取得した後、SBYトークンをマルチシグウォレットに送信すると、使用を開始できる。
