@@ -100,7 +100,7 @@ const config = {
             type: "doc",
             docId: "build/dapp-staking/index",
             position: "left",
-            label: "zkEVM",
+            label: "dApp Staking",
           },
           {
             type: "localeDropdown",
