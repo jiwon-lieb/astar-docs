@@ -1,29 +1,22 @@
-/**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
+const commonSidebar = [
+  {
+    type: 'html',
+    value: '<span class="sidebar-divider" />',
+  },
+  {
+    type: 'category',
+    label: 'About zkEVM',
+    link: { type: 'doc', id: 'learn/zkEVM/index' },
+    items: [
+      'learn/zkEVM/quickstart',
+      'learn/zkEVM/faq',
+    ],
+  },
+  "learn/glossary",
+  "use/astar-townhall",
+  "use/troubleshooting",
+]
 
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
- */
-
-// @ts-check
-
-/** @type {import("@docusaurus/plugin-content-docs").SidebarsConfig} */
-/** const sidebars = {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
-
-  tutorialSidebar: [
-    {
-      type: "category",
-      label: "Tutorial",
-      items: ["hello"],
-    },
-  ],
-};
-*/
 const sidebars = {
   learnSidebar: [
     "learn/index",
@@ -40,7 +33,6 @@ const sidebars = {
         "learn/dapp-staking/protocol-parameters",
       ],
     },
-    "learn/glossary",
     "learn/networks",
     {
       type: "category",
@@ -63,6 +55,15 @@ const sidebars = {
         "learn/tokenomics2/legacy_inflation",
       ],
     },
+    {
+      type: "category",
+      label: "Cross-Chain Messaging",
+      link: { type: "doc", id: "learn/interoperability/index"},
+      items: [
+        "learn/interoperability/asset-list",
+      ],
+    },
+    ...commonSidebar,
   ],
   useSidebar: [
     "use/index",
@@ -76,8 +77,17 @@ const sidebars = {
         "use/manage-assets/transfer-tokens",
       ],
     },
-    "use/astar-townhall",
-    "use/troubleshooting",
+    {
+      type: "category",
+      label: "Manage Wallets",
+      link: { type: "doc", id: "use/manage-walets/index"},
+      items: [
+        "use/manage-wallets/wallet-providers/index",
+      ],
+    },
+    
+
+    ...commonSidebar,
   ]
   }
 
