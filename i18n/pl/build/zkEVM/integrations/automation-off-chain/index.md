@@ -6,8 +6,3 @@ Automations solutions check on-chain and off-chain for predefined condtions and 
 Auto harvesting, executing prediction rounds, limit orders or pull oracles are examples of automation.
 
 <br/>
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>
