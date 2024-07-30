@@ -7,8 +7,3 @@ Astar zkEVM is Layer 2 scaling solution for Ethereum offering a blazing fast and
 For a more detailed explanation of Astar zkEVM, refer to the comprehensive presentation in the [Learn section](/docs/learn/zkEVM/).
 
 ### Pages of interest:
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>

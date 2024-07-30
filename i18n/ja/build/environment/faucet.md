@@ -49,7 +49,7 @@ If your inputs are valid, you will receive SBY tokens from the faucet.
 ## Chaindrop Portal
 
 Faucet is currently only available for Shibuya. <br />
-To access the faucet visit the [chaindrop portal](https://chaindrop.org/?chainid=81\&token=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee), and select Shibuya from the token list.
+To access the faucet visit the [chaindrop portal](https://chaindrop.org/?chainid=81\\&token=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee), and select Shibuya from the token list.
 
 ![1](img/chaindrop_1.png)
 

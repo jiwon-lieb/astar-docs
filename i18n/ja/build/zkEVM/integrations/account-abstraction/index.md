@@ -27,8 +27,3 @@ ERC-4337, also known as EIP-4337.
 - [Biconomy SDK Account Abstraction toolkit](/docs/build/zkEVM/integrations/account-abstraction/safe--aa/)
 
 <br/>
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>

@@ -22,8 +22,3 @@ Astar zkEVM は、Polygon の Chain Development Kit (チェーン開発ツール
 以下のセクションでは、開発環境をセットアップする手順を詳しく説明し、Astar zkEVM 上で高いスケーラビリティを持つ dApp とシームレスなユーザーオンボーディングを実現するためによく用いられるツールやサービスを紹介します。
 
 <br/>
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>

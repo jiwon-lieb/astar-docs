@@ -61,8 +61,7 @@ The relevant entries for the `AccountLedger` are `staked` and `staked_future`.
 In case `staked_future` is not `None` (or not `null`), then its era **must** be exactly `+1` compared to the `staked` era.
 E.g. if `staked.era = 15` , then `staked_future.era`, if it exists, must be `16`.
 
-First step in getting claimable staker reward eras to find the final era for which rewards can be claimed. There are three possibilities:
-1. Rewards have expired and there’s nothing to claim.
+First step in getting claimable staker reward eras to find the final era for which rewards can be claimed. There are three possibilities: Rewards have expired and there’s nothing to claim.
 2. Rewards are from a past period (`staker.period` or `staker_future.period` is older than the ongoing period) in which case `PeriodEnd` storage entry should be read to find the ending era of that period.
 3. Rewards are from the ongoing period in which case ending era is `protocol_state.current_era - 1`
 
@@ -192,8 +191,7 @@ Each account can have a limited amount of `ContractStakeEntries`. This is denote
 If an account has number of contract stake entries equal to the limit, calling `stake` might fail due to an `TooManyStakedContracts` error.
 A special extrinsic call, `cleanup_expired_entries` can be used to do the cleanup of expired entries to help with this problem.
 
-Entry is considered to be expired if:
-1. It's from a past period & the account wasn't a loyal staker, meaning there's no claimable bonus reward.
+Entry is considered to be expired if: It's from a past period & the account wasn't a loyal staker, meaning there's no claimable bonus reward.
 2. It's from a period older than the oldest claimable period, regardless whether the account was loyal or not.
 
 However, it is possible that the aforementioned cleanup call won’t work if the staker account is trying to stake on more contracts than it is allowed.

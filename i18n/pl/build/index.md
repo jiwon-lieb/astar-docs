@@ -39,8 +39,3 @@ Solidity developers feel right at home building on Astar in both the Polkadot an
 Polkadot and Ethereum networks provide some of the best security guarantees in the web3 industry.
 
 <br/>
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>

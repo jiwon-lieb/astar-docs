@@ -7,8 +7,3 @@ import Figure from '/src/components/figure'
 <Figure src={require('/docs/build/wasm/chainide-for-astar-wasm/img/chainIDE55.png').default} width="100%" />
 
 ### Pages of interest:
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>

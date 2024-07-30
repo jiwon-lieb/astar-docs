@@ -160,8 +160,3 @@ As a result, stakers are rewarded for their commitment and staking efforts.
 dApp staking v3 has been audited by [SR Labs](https://www.srlabs.de/). For more information check out [this link](https://github.com/AstarNetwork/Audits/blob/72337c6d9aede3c3ae4f72024077c651f9bf2886/reports/2024-01%20Astar%20dApp%20Staking%20v3%20-%20SR%20Labs.pdf)
 
 ### Other pages may be of interest:
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>
