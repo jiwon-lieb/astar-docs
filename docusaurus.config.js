@@ -39,15 +39,10 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
+          sidebarCollapsible: true,
           editUrl: "https://github.com/AstarNetwork/astar-docs/tree/main/",
           remarkPlugins: [math],
           rehypePlugins: [katex],
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: "https://github.com/AstarNetwork/astar-docs/tree/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
@@ -76,31 +71,23 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "getting-started",
+            docId: "learn/index",
+            sidebarID: "learnSidebar",
             position: "left",
-            label: "Docs",
+            label: "Learn",
           },
           {
             type: "doc",
-            docId: "build/index",
+            docId: "use/index",
+            sidebarID: "useSidebar",
             position: "left",
-            label: "Start Building",
+            label: "Use",
           },
           {
             type: "doc",
             docId: "build/zkEVM/quickstart",
             position: "left",
             label: "zkEVM",
-          },
-          {
-            to: "https://medium.com/astar-network",
-            label: "Medium",
-            position: "left",
-          },
-          {
-            to: "https://www.youtube.com/channel/UC36JgEF6gqatVSK9xlzzrvQ",
-            label: "Youtube",
-            position: "left",
           },
           {
             type: "localeDropdown",
@@ -148,6 +135,10 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/AstarNetwork",
+              },
+              {
+                label: "YouTube",
+                href: "https://www.youtube.com/channel/UC36JgEF6gqatVSK9xlzzrvQ",
               },
             ],
           },
