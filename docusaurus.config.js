@@ -98,7 +98,7 @@ const config = {
           },
           {
             type: "doc",
-            docId: "build/dapp-staking",
+            docId: "build/dapp-staking/index",
             position: "left",
             label: "zkEVM",
           },
