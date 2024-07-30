@@ -18,7 +18,7 @@ Read the linked chapters or use tutorials to be able to answer following questio
 - Connect to browser IDE Remix using this [tutorial](/docs/build/builder-guides/astar_features/use_remix)
 
 - Does your environment look like this:
-  \<img src={CustomNet} style={{width: 400}} />
+  \\<img src={CustomNet} style={{width: 400}} />
 
 - Can you say what does `Custom (81) network` mean?
 
@@ -30,7 +30,7 @@ Read the linked chapters or use tutorials to be able to answer following questio
 
 ## Start using Solidity
 
-\<img src={Zombie} style={{width: 100}} />
+\\<img src={Zombie} style={{width: 100}} />
 
 Since it's inception, Solidity has become mainstream language for smart contract development. There are many good tutorials to start learning Solidity and one of the popular places is [Crypto Zombies](https://cryptozombies.io/).
 
