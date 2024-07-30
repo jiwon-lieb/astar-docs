@@ -1,20 +1,20 @@
 ---
 sidebar_position: 0
-title: よくある質問
-sidebar_label: General FAQs
+title: zkEVMについてのよくある質問
+sidebar_label: よくある質問
 ---
 
-# General FAQ
+# よくある質問
 
 ## 概要
 
-This document compiles some of the frequently asked questions related to the Astar zkEVM. このドキュメントでは、Astar zkEVM のEVM等価性に関するよくある質問を解説します。 詳細については、[Polygon zkEVM documentation](https://wiki.polygon.technology/docs/category/zkevm-protocol/)をご覧ください。
+このドキュメントでは、Astar zkEVM のEVM等価性に関するよくある質問を解説します。 詳細については、[Polygon zkEVM documentation](https://wiki.polygon.technology/docs/category/zkevm-protocol/)をご覧ください。
 
 ### What is Astar zkEVM?
 
-Astar zkEVMは、Ethereum上のレイヤー2スケーリングソリューションで、EVM等価のスマートコントラクト環境を提供します。 これは、Ethereum用の既存のスマートコントラクト、開発ツール、およびウォレットのほとんどがAstar zkEVMでも動作することを意味します。 Astar zkEVM は、ゼロ知識証明の力を利用してトランザクションコストを削減し、処理能力を向上させると同時に、Ethereum のセキュリティを継承しています。
+Astar zkEVMは、Ethereum上のレイヤー2スケーリングソリューションで、EVM等価のスマートコントラクト環境を提供します。 これは、Ethereum用の既存のスマートコントラクト、開発ツール、およびウォレットのほとんどがAstar zkEVMでも動作することを意味します。
 
-**現時点ではできません。** 今後の目標 (野望) としては、ユーザーの資産をレイヤー 2 (L2) からレイヤー 2に移行させるチェーンを構築することです。 言ってしまうと、zkEVMのローンチ時点ではユーザーはこの機能を利用することができません。 しかし、L2からL2への資産の移動はAstarの将来のロードマップに含まれています。
+Astar zkEVM は、ゼロ知識証明の力を利用してトランザクションコストを削減し、処理能力を向上させると同時に、Ethereum のセキュリティを継承しています。
 
 ### Astar zkEVMの主な特徴は何ですか?
 
@@ -25,7 +25,7 @@ Astar zkEVMは、Ethereum上のレイヤー2スケーリングソリューショ
 
 ### Astar zkEVMによって、どの程度のガス代の削減が期待されますか?
 
-Ethereum L1と比較すると、ガス代の大幅な削減が期待できます。 AstarのLayer 2スケーリングソリューションは、トランザクションをバッチ化することで、1つのLayer 1トランザクションのコストを複数のLayer 2トランザクションへと効果的に分散させます。 Astar's Layer 2 scaling solution batches transactions together, effectively spreading the cost of a single Layer 1 transaction across multiple Layer 2 transactions.
+Ethereum L1と比較すると、ガス代の大幅な削減が期待できます。 AstarのLayer 2スケーリングソリューションは、トランザクションをバッチ化することで、1つのLayer 1トランザクションのコストを複数のLayer 2トランザクションへと効果的に分散させます。
 
 ### zkロールアップの仕組みとは？
 
@@ -41,11 +41,11 @@ zkEVMは実現まで何年もかかると考えられていました; 完全なE
 
 Astar zkEVMネットワークをウォレットに追加するには、[こちらのガイド](../quickstart.md) を確認してください。 こちらには、便利な機能を実演するビデオと最新のRPCの詳細が含まれています。
 
-### Astar zkEVMは他のzkEVMと比較して、技術と性能の面でどうなのですか？ 技術的な強みは何ですか? What are the technical advantages there?
+### Astar zkEVMは他のzkEVMと比較して、技術と性能の面でどうなのですか？ 技術的な強みは何ですか?
 
 最も参考になるのは、[ブログ](https://vitalik.ca/general/2022/08/04/zkevm.html)で公開されている、zkEVMに関するVitalik Buterinの総合的な分析です。
 
-However, the major difference between Astar zkEVM and others is the zkEVM's efficient prover and high Ethereum equivalence. しかし、Astar zkEVMと他のzkEVMの大きな違いは、zkEVMの効率的な証明作成と高いEthereum等価性です。 証明/検証コンポーネントの設計について: 他のプロジェクトでは算術回路アプローチを使用している一方、Astar zkEVMはステートマシンアプローチを使用しています。
+しかし、Astar zkEVMと他のzkEVMの大きな違いは、zkEVMの効率的な証明作成と高いEthereum等価性です。 証明/検証コンポーネントの設計について: 他のプロジェクトでは算術回路アプローチを使用している一方、Astar zkEVMはステートマシンアプローチを使用しています。
 
 ### Astar zkEVMはオープンソースですか？
 
@@ -53,21 +53,21 @@ However, the major difference between Astar zkEVM and others is the zkEVM's effi
 
 ### Astar zkEVMには固有のトークンがありますか?
 
-No. **ガス代にはETHが用いられます**。 将来的にはASTRがAstar zkEVMのステーキングやガバナンスに使用されることが期待されます。 It is expected that ASTR will be used for staking and governance in Astar zkEVM in the future.
+No. **ガス代にはETHが用いられます**。 将来的にはASTRがAstar zkEVMのステーキングやガバナンスに使用されることが期待されます。
 
 また、Astar zkEVM が **ERC-4337経由で Account Abstraction をネイティブにサポートしている**ことも重要です。 これにより、ユーザーはどのトークンでもガス代を支払うことができます(ご自身でガスの種類を選択してください)。
 
 ### What types of dApps can be deployed on Astar zkEVM?
 
-EVMと互換性のあるdAppはすべてデプロイできます。 ただし、現在zkEVM でサポートされていない特定のプリコンパイル済みコントラクトを必要とするものは除きます。 サポートされているプリコンパイル済みコントラクトに関する詳細は、[Polygon zkEVM documentation](https://wiki.polygon.technology/docs/category/zkevm-protocol/)をご覧ください。 For more details related to supported precompiled contracts, check out the [Polygon zkEVM documentation](https://wiki.polygon.technology/docs/category/zkevm-protocol/).
+EVMと互換性のあるdAppはすべてデプロイできます。 ただし、現在zkEVM でサポートされていない特定のプリコンパイル済みコントラクトを必要とするものは除きます。 サポートされているプリコンパイル済みコントラクトに関する詳細は、[Polygon zkEVM documentation](https://wiki.polygon.technology/docs/category/zkevm-protocol/)をご覧ください。
 
 ### このレイヤー 2 zkEVMは他のチェーンと連携することができますか?
 
-**At the moment, the answer is No**. Aspirationally, the goal in the future is to build one of many chains that allow users' assets to move from Layer 2 (Layer 2) to Layer 2. With that being said, users will not be able to utilize this functionality at launch, but Layer 2 to Layer 2 movement is included in our future roadmap.
+**現時点ではできません。** 今後の目標 (野望) としては、ユーザーの資産をレイヤー 2 (L2) からレイヤー 2に移行させるチェーンを構築することです。 言ってしまうと、zkEVMのローンチ時点ではユーザーはこの機能を利用することができません。 しかし、L2からL2への資産の移動はAstarの将来のロードマップに含まれています。
 
 ### Astar zkEVMの主なユースケースは何ですか?
 
-**DeFiアプリケーション**: Astar zkEVMは高いセキュリティと検閲耐性を備えているため、DeFiアプリケーションに適しています。 zkRollupsを使うと、入出金のために長い期間待つ必要はありません。Astar zkEVMは、DeFi dAppsとDeFiユーザーにとってより資本効率の高い環境を提供します。 zkRollups don’t have to wait for long periods for deposits and withdrawals; Astar zkEVM offers better capital efficiency for DeFi dApps/users.
+**DeFiアプリケーション**: Astar zkEVMは高いセキュリティと検閲耐性を備えているため、DeFiアプリケーションに適しています。 zkRollupsを使うと、入出金のために長い期間待つ必要はありません。Astar zkEVMは、DeFi dAppsとDeFiユーザーにとってより資本効率の高い環境を提供します。
 
 **NFT、Gamefi、およびエンタープライズアプリケーション**：低いガスコストと速いトランザクション、Ethereumとの結びつきによる高いレベルのセキュリティは一流のNFT、GameFi、およびエンタープライズアプリケーションにとって魅力的です。
 
@@ -75,18 +75,18 @@ EVMと互換性のあるdAppはすべてデプロイできます。 ただし、
 
 ### Astar zkEVMがL1に証明を発行するとき、証明が正確で必要なすべての取引が含まれているという信用はどのように実現されますか？
 
-Our zkRollup smart contract warranties it. AstarのzkRollupスマートコントラクトが保証します。 データの可用性と、公開された有効性証明が迅速かつ容易に検証可能なSNARK証明であることにより、証明は信頼できるものとなります。
+AstarのzkRollupスマートコントラクトが保証します。 データの可用性と、公開された有効性証明が迅速かつ容易に検証可能なSNARK証明であることにより、証明は信頼できるものとなります。
 
 ### Astar zkEVMはSolidityとVyperの両方をサポートしていますか?
 
-はい、EVMオペコードにコンパイルされるすべての言語は、Astar zkEVMで動作するようにできています。 言い換えれば、Ethereum上で実行できるコードは、Astar zkEVM上で実行できるということです。 zkEVMについてのよくある質問
+はい、EVMオペコードにコンパイルされるすべての言語は、Astar zkEVMで動作するようにできています。 言い換えれば、Ethereum上で実行できるコードは、Astar zkEVM上で実行できるということです。
 
 ### RPCノードとは？
 
-**RPC(リモートプロシージャコール)** はEthereumと互換性のあるJSON-RPCインターフェースです。 これにより、MetaMask、Etherscan、Infuraなどの既存のツールとAstar zkEVMの統合が可能になります。 RPCは、プールにトランザクションを追加したり、読み取り専用メソッドを使用してEVMのステートとやり取りしたりします。 It enables the integration of Astar zkEVM with existing tools, such as Metamask, Etherscan, and Infura. It adds transactions to the pool and interacts with the state using read-only methods.
+**RPC(リモートプロシージャコール)** はEthereumと互換性のあるJSON-RPCインターフェースです。 これにより、MetaMask、Etherscan、Infuraなどの既存のツールとAstar zkEVMの統合が可能になります。 RPCは、プールにトランザクションを追加したり、読み取り専用メソッドを使用してEVMのステートとやり取りしたりします。
 
-加えて、ソフトウェアアプリがEthereumブロックチェーンとやりとり(ブロックチェーンデータの読み込みとネットワークへのトランザクションの送信) を行うのに、Ethereumノードに接続する必要があります。 RPCノードはgethのような他のノードと同じように動作します。 It works the same way as other nodes such as geth.
+加えて、ソフトウェアアプリがEthereumブロックチェーンとやりとり(ブロックチェーンデータの読み込みとネットワークへのトランザクションの送信) を行うのに、Ethereumノードに接続する必要があります。 RPCノードはgethのような他のノードと同じように動作します。
 
 ### JSON-RPC EVMクエリをサポートしていますか? また、サポートされていないクエリは何ですか?
 
-よくある質問 公式クエリは全てサポートされています (`eth_*` エンドポイント)。 `debug_*` のような「追加の公式エンドポイント」からのアクセスに対するサポートに取り組んでいます。
+公式クエリは全てサポートされています (`eth_*` エンドポイント)。 `debug_*` のような「追加の公式エンドポイント」からのアクセスに対するサポートに取り組んでいます。

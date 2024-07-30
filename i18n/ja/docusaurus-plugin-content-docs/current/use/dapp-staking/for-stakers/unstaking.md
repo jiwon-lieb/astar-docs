@@ -8,13 +8,11 @@ import Figure from "/src/components/figure"
 
 ## 概要
 
-これは完全なブロック生成の時間がおよそ12秒である事に基づいてることに注意してください。 遅延が発生した場合は、ロック解除期間が少し長くなることがあります。\
-ロック解除期間の長さは [こちら](/docs/use/dapp-staking/for-stakers/#parameters) で確認することができます。 Staking is one of the scenarios that require tokens to be bonded.\
 **Locking**はトークンが一時的に `locked` されたプロセスです。 ステーキングはトークンを結合する必要があるシナリオの1つです。\
-**Unlocking**は、これらのトークンをロックを解除することをネットワークに通知することです。 ロック解除期間の後、トークンを引き出すことができ、トークンは `transferable` になります。 After the unlocking period, you can withdraw the tokens, and they become `transferable`.
+**Unlocking**は、これらのトークンをロックを解除することをネットワークに通知することです。 ロック解除期間の後、トークンを引き出すことができ、トークンは `transferable` になります。
 
-Please note that this is based on a perfect block production of 12s. In case of any delay, your unlocking period can be a little longer.\
-The unlocking period lenghts can be consulted [here](/docs/learn/dapp-staking/#parameters).
+これは完全なブロック生成の時間がおよそ12秒である事に基づいてることに注意してください。 遅延が発生した場合は、ロック解除期間が少し長くなることがあります。\
+ロック解除期間の長さは [こちら](/docs/use/dapp-staking/for-stakers/#parameters) で確認することができます。
 
 :::warning
 
@@ -48,11 +46,11 @@ dAppから一部のトークンを`unstake`し、残りのトークンがdAppの
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Unbonding_1.png').default } width="100%" />
 
 - **Remaining Days** はトークンを引き出す前に待たなければならない日数または`Eras`を見積ます。
-- ロック解除期間が終了したら、**withdraw button**をクリックして資金を引き出す必要があります。 トランザクションに署名すると、トークンはあなたのウォレットで転送可能になります。 トランザクションに署名すると、トークンはあなたのウォレットで転送可能になります。
+- ロック解除期間が終了したら、**withdraw button**をクリックして資金を引き出す必要があります。 トランザクションに署名すると、トークンはあなたのウォレットで転送可能になります。
 
 **Chunks**
 
-それぞれのロック解除は Chunk と呼ばれます。 Chunk とはなんでしょうか？ But what is a Chunk?
+それぞれのロック解除は Chunk と呼ばれます。 Chunk とはなんでしょうか？
 
 ロック解除 Chunk は、ロック解除期間中のASTRの一定量です。
 
@@ -75,4 +73,4 @@ _**例**_:  1 つの Chunk は次のように説明できます：「1000 ASTR�
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Panel_1.png').default } width="100%" />
 
 2. ロック解除期間の終了時に、**withdraw button**をクリックすることで引き出すことができます。
-3. Sign the transaction and your tokens will be made transferrable in your wallet.
+3. トランザクションに署名すると、トークンはあなたのウォレットで転送可能になります。

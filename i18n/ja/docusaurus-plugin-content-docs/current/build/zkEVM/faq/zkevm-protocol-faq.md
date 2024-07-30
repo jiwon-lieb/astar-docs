@@ -4,9 +4,9 @@ title: zkEVMのプロトコルに関する質問
 sidebar_label: プロトコルに関する質問
 ---
 
-This document compiles some of the frequently asked questions related to the Astar zkEVM protocol. このドキュメントでは、Astar zkEVM のプロトコルに関するよくある質問を解説します。 詳細については、[Polygon zkEVM documentation](https://wiki.polygon.technology/docs/category/zkevm-protocol/)をご覧ください。
+このドキュメントでは、Astar zkEVM のプロトコルに関するよくある質問を解説します。 詳細については、[Polygon zkEVM documentation](https://wiki.polygon.technology/docs/category/zkevm-protocol/)をご覧ください。
 
----
+***
 
 ### How are transactions collected and ordered?
 
@@ -18,23 +18,23 @@ This document compiles some of the frequently asked questions related to the Ast
 
 ### Rollupバッチを作る前にシーケンサーが待つ時間やトランザクションのインターバルはありますか?
 
-The sequencer always has an open batch. Transactions are added to this batch until this batch is full or a big timeout happens. Those batches are also accumulated until it reaches 128K of batches (or a big timeout) and then a sequencing transaction to Layer 1 is sent.
+シーケンサーには常にオープンバッチがあります。 トランザクションは、このバッチがいっぱいになるか、長いタイムアウトが発生するまで、このバッチに追加されます。 これらのバッチは128K個のバッチ(または大きなタイムアウト)に達するまで蓄積され、蓄積したらL1へのシーケンシングトランザクションが送信されます。
 
-From the Layer 2 user perspective, a new Layer 2 block (different from the Layer 2 batch) is closed and sent to the user. The user perceives the transaction finality even if the Layer 2 batch is not closed. **One Layer 2 Transaction is one Layer 2 Block**.
+L2ユーザーの観点からは、新しいL2ブロック(L2バッチとは異なる)がクローズされ、ユーザーに送信されるように見えます。 ユーザーには、L2 バッチがクローズされていない場合でも、トランザクションが確定したように見えます。 **1つの L2 トランザクションで1つの L2 ブロック**だからです。
 
 ### L1でファイナライズされるためにトランザクションはどのような過程を通過しますか?
 
 バッチ内の特定のトランザクションを検証するプロセスには、通常、3つのステップが必要です。
 
-1. **Trusted State:** This state is given by the trusted sequencer almost instantaneously. No Layer 1 transactions are required.
+1. **Trusted State:** トランザクションは信頼のあるシーケンサーによってほとんど瞬時にこの状態になります。 L1でのトランザクションは必要ありません。
 
-2. **Virtual State:** トランザクションはL1にあります。 状態が確定的で、計算が容易なため、この状態のトランザクションとその順番は変更できません。 These transactions and their order cannot be modified as the state is final and anybody could calculate.
+2. **Virtual State:** トランザクションはL1にあります。 状態が確定的で、計算が容易なため、この状態のトランザクションとその順番は変更できません。
 
 3. **Verified State:** virtual stateがスマートコントラクトによって検証されると、資金を引き出すことが可能になります。
 
 ### シーケンサーは証明を生成するためにどのようにトランザクションを検証しますか?
 
-シーケンサーはトランザクションプールからトランザクションを取得し、それが正しくフォーマットされ、必要なすべての情報を含んでいることを確認します。 シーケンサーは以下の点をチェックします： The Sequencer does the following checks:
+シーケンサーはトランザクションプールからトランザクションを取得し、それが正しくフォーマットされ、必要なすべての情報を含んでいることを確認します。 シーケンサーは以下の点をチェックします：
 
 - 送金者がトランザクションのガス代とスマートコントラクトにより必要とされる十分な資金を持っていることを確認することで、取引が有効であることを確認します。 もし十分な資金を持っていれば、有効で、正しいバイトコードを生成します。
 
@@ -42,27 +42,27 @@ From the Layer 2 user perspective, a new Layer 2 block (different from the Layer
 
 - 送信者の口座残高が別のトランザクションで既に使われていないことを確認して、トランザクションが二重支払いでないことを確認します。
 
-Once the transaction is deemed valid, the Sequencer applies the transaction to the current state of the Astar zkEVM, updating the state of the smart contract and the account balances as necessary. Duration and cost vary depending on traffic and prevailing gas prices.
+トランザクションが有効と見なされると、シーケンサーは必要に応じてスマートコントラクトと口座残高の状態を更新し、Astar zkEVMの現在の状態にトランザクションを適用します。  所要時間とコストは、ネットワークの混雑具合や一般的なガス価格によって異なります。
 
 ### トランザクションがAstar zkEVMでファイナリティを達成するのはいつですか?
 
 **ユーザーがシーケンサーを信頼している場合**、トランザクションはシーケンサーにより順序づけられた時点 (すなわちTrusted State) で確定したとみなされます。
 
-**ユーザーがL1の状態のみを信頼する場合**、トランザクションは**Virtual State**に到達した瞬間に確定します。 つまり、データが利用可能で、トランザクションが既にL1にある状態になった瞬間です。 This means, once the data is available and the transaction is already on Layer 1.
+**ユーザーがL1の状態のみを信頼する場合**、トランザクションは**Virtual State**に到達した瞬間に確定します。 つまり、データが利用可能で、トランザクションが既にL1にある状態になった瞬間です。
 
-**In case the user needs to withdraw funds**, he/she needs to wait for the Prover to convert the implicit state to an explicit state. We call this last state the **Consolidated or Verified State**.
+**ユーザーが資金を引き出す必要がある場合**、プルーバー (証明発行者) が、変更不可能だが未検証の状態を検証済の状態へと変換するのを待つ必要があります。 この最後の状態を**ConsolidatedもしくはVerified State**と呼びます。
 
-### Are Sequencers and Provers in-house or external? How do you ensure that your Sequencers and Provers maintain decentralization?
+### シーケンサーとプルーバーはエコシステム内部の人物ですか？それとも外部の人物ですか？ シーケンサーとプルーバーの分散性はどのようにして保証されますか？
 
-Astar zkEVMの**シーケンサーは、初期段階においては中央集権的にならざるを得ません。** 今後のリリースでシーケンサーを分散化するロードマップがあります。 We have a roadmap to decentralize the sequencer in future releases.
+Astar zkEVMの**シーケンサーは、初期段階においては中央集権的にならざるを得ません。** 今後のリリースでシーケンサーを分散化するロードマップがあります。
 
-Likewise, the **Prover is also centralized at the beginning** but the vision is to enable a Provers market. Provers cannot do much but generate proofs. To have a decentralized system of Provers is much more critical (and difficult) than the Sequencer.
+同様に、**プルーバーも最初は集中しています**が、ビジョンとしてはプルーバーの市場を成立させることを目指しています。 プルーバーは証明を生成すること以外はほとんど役割を持ちません。 分散したプルーバーのシステムを構築することは、シーケンサーで同じことをするよりもはるかに重要 (そして難しい) です。
 
 ### zkNode はシーケンサーとアグリゲーターの両方として機能できますか? そうでない場合、ノードが果たす役割をどのようにして決定するのですか?
 
 zkNode は、ゼロ知識証明プロトコルの具体的な実装に応じて、シーケンサーとアグレガターの両方として機能することが可能です。
 
-In some implementations, a node may only be able to perform one function or the other. The role a node can play is determined by the specific implementation of the protocol and the requirements of the network. For example, some protocols may require a certain number of nodes to perform the role of sequencer and a certain number to perform the role of aggregator in order to ensure the security and efficiency of the network.
+また実装によっては、ノードは一方の機能のみしか実行できないかもしれません。 ノードが果たしうる役割は、プロトコルの特定の実装とネットワークの要件によって決定されます。 例えば、 プロトコルによっては、ネットワークのセキュリティと効率性を確保するために、シーケンサーの役割とアグリゲータの役割を実行するためにそれぞれ特定の数のノードを必要とする場合があります。
 
 ### 状態同期コンポーネントは、トランザクションバッチとその有効性証明がL1上でミントされた後、どのようにしてL2で同期されますか?
 
@@ -72,12 +72,12 @@ In some implementations, a node may only be able to perform one function or the 
 
 ### Forced Batchとは何ですか?
 
-A Forced Batch is an Layer 2 batch included in an Layer 1 transaction. Trusted Sequencer is forced to include those batches. This is how a user guarantees that they can withdraw funds even if they are censored by Trusted Sequencer.
+Forced BatchはL1トランザクションに含まれるL2バッチです。 信頼されたシーケンサーはこれらのバッチをトランザクションに含まなければなりません。 これは、シーケンサーの検閲を受けてもユーザーが資金を引き出せることを保証する仕組みです。
 
 この性質に、よりシステムの検閲耐性を模倣します。
 
 ### Emergency Stateとは何ですか、そしてどのような時、それは発動しますか？
 
-Emergency State halts the functionalities such as the sequencing of batches, verifying of batches, and forced batches.
+Emergency Stateはバッチの順序づけ、バッチの検証、forced batchなどの機能を停止させます。
 
-It can be triggered by the owner of a smart contract or, in the case of Astar zkEVM, by a Security Council multisig. This means that the Security Council can invoke the Emergency State if the pending state timeout is reached or a threatening vulnerability occurs.
+これは、スマートコントラクトの所有者、またはAstar zkEVMの場合、Security Councilマルチシグによって引き起こされます。 つまり、保留中の状態がタイムアウトに達した場合や脅威となる脆弱性が発生した場合、Security Councilが緊急状態を呼び出せるということです。

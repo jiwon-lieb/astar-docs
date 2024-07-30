@@ -28,15 +28,6 @@ import Figure from "/src/components/figure"
 
 dApp上のすべての保留中の報酬は、再度ステーキングする前に請求されなければなりません。
 
-:::tip
-
-ステーキングを解除した後、それらのERAが経過すると、引き出すことができるようになります。 [Unlocking](/docs/use/dapp-staking/for-stakers/unstaking/) に関する詳細情報。\
-ロック解除期間の長さは [こちら](/docs/use/dapp-staking/for-stakers/#parameters) で確認することができます。
-
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Claiming_Rewards.png').default } width="100%" />
-
-:::
-
 ### MY DAPPS パネル
 
 MY DAPPS パネルは、あなたがステーキングしているすべてのdAppsを見ることができる場所です。
@@ -50,11 +41,12 @@ MY DAPPS パネルは、あなたがステーキングしているすべてのdA
 
 ### UNLOCKING パネル:
 
-The unlocking panel is where you can see the progress of unlocking and withdrawing.
-For the runtime logic, when unlocking, you don’t unlock from a specific dApp but unlock as `Chunks`. First pending unlocking gives Chunk 1, second pending unlocking gives Chunk 2 etc.
+UNLOCKING パネルは、ロック解除と引き出しの進行状況を確認することができます。
+実行時のロジックでは、ロック解除時に特定の dApp からロックを解除するのではなく、 `Chunks` としてロックを解除します。 最初の保留中のロック解除はチャンク1、2番目の保留中のロック解除はチャンク2などです。
+最初の保留中のロック解除が Chunk 1 、2番目の保留中のロック解除で Chunk 2、と採番されます。
 
-After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unlocking](/docs/use/dapp-staking/for-stakers/unstaking/).\
-The unlocking period lenghts can be consulted [here](/docs/learn/dapp-staking/#parameters).
+ステーキングを解除した後、それらのERAが経過すると、引き出すことができるようになります。 [Unlocking](/docs/use/dapp-staking/for-stakers/unstaking/) に関する詳細情報。\
+ロック解除期間の長さは [こちら](/docs/use/dapp-staking/for-stakers/#parameters) で確認することができます。
 
 - **Remaining days:** トークンを引き出すまでに待たなければならない日数または`Eras`の数：
 - **Available to withdraw:** トークンをロック解除して `transferable` にする;

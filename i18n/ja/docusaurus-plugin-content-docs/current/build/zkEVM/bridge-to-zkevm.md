@@ -3,7 +3,6 @@ sidebar_position: 0
 title: Astar zkEVM へのブリッジ
 sidebar_label: zkEVMへのブリッジ
 ---
-
 import bridge1 from '/docs/build/zkEVM/img/astar-bridge-zKatana-Shibuya1.jpg'
 import bridge2 from '/docs/build/zkEVM/img/astar-bridge-zKatana-Shibuya2.jpg'
 import bridge3 from '/docs/build/zkEVM/img/astar-bridge-zKatana-Shibuya3.jpg'
@@ -15,18 +14,14 @@ import walletselect from '/docs/build/zkEVM/img/wallet-select.jpg'
 
 ## 概要
 
-Here you will find information about how to bridge assets to the Astar zkEVM, both to **zKatana testnet** and to **Astar zkEVM mainnet**. Presently, there are two options for bridging assets to the zkEVM:
+ここでは、Astar zkEVM へのアセットのブリッジ方法をご紹介します。 現在、zkEVM にアセットをブリッジするには 2 つの方法があります：
 
-1. Ethereum L1 から Astar zkEVM へのブリッジ → ブリッジされた ETH は、Astar zkEVM 上での dApps のテストおよびデプロイに必要なネイティブトークンです。したがって、ネットワークを使用する前に、開発者は Layer 1 から Layer 2 へ ETH をブリッジする必要があります。 Astar Portal を介した Ethereum(Layer 1)から Astar zkEVM(Layer 2)へのブリッジがあり、ネットワークの混雑具合に応じておよそ10〜30 分かかります。 Accessible through the Astar Portal, which can take approximately 10-30 minutes, depending on network usage.
-2. Astar Parachain から Astar zkEVMへのブリッジ (現在開発中) → Astar Substrate EVMとAstar zkEVMの間での、ラップされたアセットのロックとミントを容易にする、サードパーティのアセットブリッジやメッセージネットワーク サードパーティのブリッジサービスおよび互換性のあるアセットの使用方法に関する詳細は、[integrations section](/docs/build/zkEVM/integrations/bridges-relays/) をご覧ください。 See the [integrations section](/docs/build/zkEVM/integrations/bridges-relays/) for more information about how to use 3rd-party bridge services and compatible assets._
+1. Ethereum L1 から Astar zkEVM へのブリッジ → ブリッジされた ETH は、Astar zkEVM 上での dApps のテストおよびデプロイに必要なネイティブトークンです。したがって、ネットワークを使用する前に、開発者は Layer 1 から Layer 2 へ ETH をブリッジする必要があります。 Astar Portal を介した Ethereum(Layer 1)から Astar zkEVM(Layer 2)へのブリッジがあり、ネットワークの混雑具合に応じておよそ10〜30 分かかります。
+2. Astar Parachain から Astar zkEVMへのブリッジ (現在開発中) → Astar Substrate EVMとAstar zkEVMの間での、ラップされたアセットのロックとミントを容易にする、サードパーティのアセットブリッジやメッセージネットワーク サードパーティのブリッジサービスおよび互換性のあるアセットの使用方法に関する詳細は、[integrations section](/docs/build/zkEVM/integrations/bridges-relays/) をご覧ください。
 
 ### Astar Portalを用いたETHの送金
 
 [Astar Portal](https://portal.astar.network)を検索し、MetaMask を接続してください。
-
-:::note
-This example is using MetaMask wallet and examples are with for the testnet but same applies for the mainnet.
-:::
 
 <div style={{textAlign: 'center'}}>
   <img src={walletselect} style={{width: 400}} />
@@ -38,7 +33,7 @@ This example is using MetaMask wallet and examples are with for the testnet but 
   <img src={network} style={{width: 400}} />
   </div>
 
-Click on the Bridge tab on the left-hand side. Ensure Sepolia is selected as Bridge source, and zKatana is selected as destination. After you have entered the amount of ETH to transfer, press the Confirm button.
+左側のタブで「Bridge」をクリックしてください。 Bridge のソースとして Sepolia が選択されていることを確認し、また送金先として zKatana が選択されていることを確認してください。 送金する ETH の金額を入力したら、「Confirm」ボタンを押してください。
 
 <div style={{textAlign: 'center'}}>
   <img src={bridge2} style={{width: 1000}} />

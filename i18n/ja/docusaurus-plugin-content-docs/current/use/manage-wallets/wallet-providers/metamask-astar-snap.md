@@ -12,18 +12,15 @@ import Figure from '/src/components/figure'
   <div style={{ marginRight: '10px' }}>
     ## はじめに
 
-```
-Astar Wallet Snapは、MetaMaskの機能を拡張し、特にPolkadot上で動作するAstar Substrateで構築されたブロックチェーン向けに提供されます。Astar Wallet Snapを使用すると、MetaMaskを使用してSubstrateウォレットを迅速に生成し、トランザクションの署名や@polkadot/extension-dappパッケージを利用する分散型アプリケーション（dApps）とのやり取りが可能になります。MetaMaskを介してAstarエコシステム内のすべてのdAppsとシームレスにやり取りできるため、MetaMaskの有用性がEthereumやEVM互換のネットワークを超えてSubstrateにまで拡大します。
+    Astar Wallet Snapは、MetaMaskの機能を拡張し、特にPolkadot上で動作するAstar Substrateで構築されたブロックチェーン向けに提供されます。Astar Wallet Snapを使用すると、MetaMaskを使用してSubstrateウォレットを迅速に生成し、トランザクションの署名や@polkadot/extension-dappパッケージを利用する分散型アプリケーション（dApps）とのやり取りが可能になります。MetaMaskを介してAstarエコシステム内のすべてのdAppsとシームレスにやり取りできるため、MetaMaskの有用性がEthereumやEVM互換のネットワークを超えてSubstrateにまで拡大します。
 
-## インストール方法
+    ## インストール方法
 
-Astar Wallet Snap の運用を進めるには以下のステップに従ってください。([Portal](https://portal.astar.network/))
-例として用いる dapp の[ソースコード](https://github.com/AstarNetwork/metamask-snap-astar/tree/master/packages/example)
-はレポジトリの一部分としてご利用いただけます。このガイドは Metamask が
-[インストール](https://metamask.io/download/)されていて、適切に設定されていることを想定しています。
-```
-
-  </div>
+    Astar Wallet Snap の運用を進めるには以下のステップに従ってください。([Portal](https://portal.astar.network/))
+    例として用いる dapp の[ソースコード](https://github.com/AstarNetwork/metamask-snap-astar/tree/master/packages/example)
+    はレポジトリの一部分としてご利用いただけます。このガイドは Metamask が
+    [インストール](https://metamask.io/download/)されていて、適切に設定されていることを想定しています。
+  </div> 
   <div>
     <video width="400" controls>
       <source src={require('/docs/use/manage-wallets/wallet-providers/img/astar_snap_30s_v1.mp4').default } />
@@ -31,18 +28,6 @@ Astar Wallet Snap の運用を進めるには以下のステップに従って�
   </div>
 </div>
 
-:::note
-Snap-based accounts are derived from the private key associated with your MetaMask account (your seed phrase), so funds cannot be lost even in the event support for a particular Snap is discontinued.
-:::
-
-## How to install
-
-Follow these steps to interact with the Astar Wallet snap
-[Portal](https://portal.astar.network/). The
-[source code](https://github.com/AstarNetwork/metamask-snap-astar/tree/master/packages/example)
-for the example dApp is available as part of the repository. This guide assumes
-that MetaMask is [installed](https://metamask.io/download/) and properly
-configured.
 
 ## Connect to the Portal
 
@@ -60,9 +45,11 @@ accept it, click the MetaMask "Third-party software notice" button labeled
 
 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
   <div style={{ marginRight: '10px' }}>
-    <Figure caption='Review 3rd-Party Software Notice' src={require('/docs/use/manage-wallets/wallet-providers/img/02.png').default } width="100%" /></div>
+    <Figure caption='Review 3rd-Party Software Notice' src={require('/docs/use/manage-wallets/wallet-providers/img/02.png').default } width="100%" />
+  </div>
   <div>
-    <Figure caption='Accept 3rd-Party Software Notice' src={require('/docs/use/manage-wallets/wallet-providers/img/03.png').default } width="100%" /></div>
+    <Figure caption='Accept 3rd-Party Software Notice' src={require('/docs/use/manage-wallets/wallet-providers/img/03.png').default } width="100%" />
+  </div>
 </div>
 
 ## Review & Accept Connection Request
