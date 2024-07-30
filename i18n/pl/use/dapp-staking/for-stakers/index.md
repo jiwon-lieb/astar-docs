@@ -83,8 +83,3 @@ If you have any questions, please consult the [FAQ page](/docs/learn/dapp-stakin
 ### Other pages may be of interest:
 
 <br/>
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>
