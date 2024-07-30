@@ -25,9 +25,6 @@ For more information about Web3Auth check out their [official documentation](htt
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>
 
 

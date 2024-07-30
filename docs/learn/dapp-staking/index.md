@@ -161,7 +161,4 @@ dApp staking v3 has been audited by [SR Labs](https://www.srlabs.de/). For more 
 
 ### Other pages may be of interest:
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

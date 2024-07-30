@@ -9,7 +9,4 @@ En esta sección, describiremos los detalles técnicos de XCM para que los desar
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

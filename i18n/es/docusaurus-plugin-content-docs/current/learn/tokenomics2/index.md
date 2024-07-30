@@ -34,7 +34,4 @@ Astar, Shiden y Shibuya comparten el mismo modelo económico, sin embargo existe
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

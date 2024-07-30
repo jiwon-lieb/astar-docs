@@ -49,7 +49,3 @@ dAppの所有者とチームにとってVoting Subperiodの前および最中に
 
 dApp Staking v3への完全移行までは、dApp Staking V2のガイドも参照できます。
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>

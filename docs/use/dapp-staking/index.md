@@ -17,7 +17,4 @@ In the following sections, you'll find all the help you need to interact with dA
 You will also find guides for dApp Staking V2 for reference until the full transition to dApp Staking V3.
 
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

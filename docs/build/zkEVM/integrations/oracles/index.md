@@ -6,7 +6,4 @@ Blockchain oracles are third-party services or agents that provide smart contrac
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

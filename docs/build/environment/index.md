@@ -11,8 +11,5 @@ When you are ready to deploy a smart contract to production, you can use the inf
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>
 

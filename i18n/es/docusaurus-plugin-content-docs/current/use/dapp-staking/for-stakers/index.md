@@ -71,7 +71,4 @@ Si tiene alguna pregunta, consulte la [página de preguntas frecuentes](/docs/le
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

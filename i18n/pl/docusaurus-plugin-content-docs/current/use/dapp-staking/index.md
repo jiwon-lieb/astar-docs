@@ -66,8 +66,5 @@ Astar 上の dApp Staking の取り組みは、私たちの#Build2Earn プログ
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>
 

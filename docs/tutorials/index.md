@@ -6,7 +6,4 @@ In the following sections you can find hands-on tutorials designed to help devel
 
 <br/>
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>

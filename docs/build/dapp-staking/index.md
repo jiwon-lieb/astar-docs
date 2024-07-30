@@ -20,7 +20,4 @@ Learn how to integrate dApp staking into your EVM dApp in the precompiles chapte
 
 ### Other page may be of interest:
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-<DocCardList items={useCurrentSidebarCategory().items}/>
