@@ -24,6 +24,7 @@ XCM.Multilocation memory asset = XCM.Multilocation({
 #### 2. Beneficiary Multilocation
 
 Let's suppose the `beneficiary` is the EVM address `0xd43593c715fdd31c61141abd04a99fd6822c8558` of the contract in parachain **2000**. The Multilocation is `{ parents: 1, interior: X2 [Parachain: 2000, AccountId20: { id: *caller address* , network: any }] }`.\
+The interior field is of type H160 (20 bytes EVM address) so prefixed with 0x03 and suffix with 0x00 (network: any).\
 The interior field is of type H160 (20 bytes EVM address) so prefixed with 0x03 and suffix with 0x00 (network: any). The interior bytes are 0x03 + EVM address + 0x00
 
 ```solidity
