@@ -79,9 +79,9 @@ const percentiles = percentile([35, 60, 90, 99], gasPrices);
 
 ## Using the gas station
 
-- Shibuya API: GET [https://gas.astar.network/api/gasnow?network=shibuya&type=tip](https://gas.astar.network/api/gasnow?network=shibuya\&type=tip)
-- Shiden API: GET [https://gas.astar.network/api/gasnow?network=shiden&type=tip](https://gas.astar.network/api/gasnow?network=shiden\&type=tip)
-- Astar API: GET [https://gas.astar.network/api/gasnow?network=astar&type=tip](https://gas.astar.network/api/gasnow?network=astar\&type=tip)
+- Shibuya API: GET [https://gas.astar.network/api/gasnow?network=shibuya&type=tip](https://gas.astar.network/api/gasnow?network=shibuya\\&type=tip)
+- Shiden API: GET [https://gas.astar.network/api/gasnow?network=shiden&type=tip](https://gas.astar.network/api/gasnow?network=shiden\\&type=tip)
+- Astar API: GET [https://gas.astar.network/api/gasnow?network=astar&type=tip](https://gas.astar.network/api/gasnow?network=astar\\&type=tip)
 
 ### Example output
 
