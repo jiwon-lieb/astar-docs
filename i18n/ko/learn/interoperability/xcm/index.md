@@ -29,8 +29,3 @@ Readers and developers are encouraged to go over the official documentation to l
 ## Get Started
 
 <br/>
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>
