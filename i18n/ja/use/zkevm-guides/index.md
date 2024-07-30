@@ -7,8 +7,3 @@ Astar zkEVMは、Ethereum自体と比較して非常に高速でコスト効率�
 Astar zkEVMについての詳しい説明については、[学習セクション](/docs/learn/zkEVM/)の包括的なプレゼンテーションを参照してください。
 
 ### おすすめのページ:
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>
